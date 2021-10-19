@@ -9,20 +9,41 @@ import { useEffect } from 'react/cjs/react.development';
 import Layout from '../components/layout/Layout';
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import data from '../data/GBLayer';
+import './main.css';
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
+import RangeSlider from 'react-bootstrap-range-slider';
+import { chargeType } from "../components/forms/Chargepoint";
+
 
 function Evselector() {
     //Checkbox
     //=========================================
     const [checkedOne, setCheckedOne] = React.useState(false);
     const [checkedTwo, setCheckedTwo] = React.useState(false);
-   
+    const [checkedThree, setCheckedThree] = React.useState(false);
+    const [checkedFour, setCheckedFour] = React.useState(false);
+    const [checkedFive, setCheckedFive] = React.useState(false);
+    const [checkedSix, setCheckedSix] = React.useState(false);   
+    
     const handleChangeOne = () => {
       setCheckedOne(!checkedOne);
     };
-   
     const handleChangeTwo = () => {
       setCheckedTwo(!checkedTwo);
     };
+    const handleChangeThree = () => {
+        setCheckedTwo(!checkedTwo);
+    };
+    const handleChangeFour = () => {
+        setCheckedTwo(!checkedTwo);
+    };
+    const handleChangeFive = () => {
+        setCheckedTwo(!checkedTwo);
+    };
+    const handleChangeSix = () => {
+        setCheckedTwo(!checkedTwo);
+    };
+
 
     const Checkbox = ({ label, value, onChange }) => {
         return (
@@ -31,9 +52,7 @@ function Evselector() {
             {label}
           </label>
         );
-      };
-
-
+      };  
 
     //search autocomplete
     //===========================================================================
@@ -45,7 +64,7 @@ function Evselector() {
         items[i] = {'name':names, 'id': i};
 
     }
-    console.log(items);
+    //console.log(items);
       const handleOnSearch = (string, results) => {
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
@@ -71,10 +90,11 @@ function Evselector() {
        // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
       }
 
-      
+      //sliders
+      //===================================================================
+      const [ value, setValue ] = useState(0); 
 
 
-      //============================================================
     const favoritesCtx = useContext(FavoritesContext);
     const [mapLayers, setMapLayers] = useState([]);
     const totalArea = mapLayers.reduce((totalarea, area) => totalarea + area.area, 0);
@@ -161,6 +181,24 @@ function Evselector() {
         );
     }
 
+    //========================================================
+    console.log(chargeType);
+    const [checkedState, setCheckedState] = useState(
+        new Array(chargeType.length).fill(false)
+      );
+    
+      //const [total, setTotal] = useState(0);
+    
+      const handleOnChange = (position) => {
+        const updatedCheckedState = checkedState.map((item, index) =>
+          index === position ? !item : item
+        );
+    
+        setCheckedState(updatedCheckedState);
+        console.log(updatedCheckedState);
+    
+      };
+
     return(
       <Layout>
         <section className="mainPage">
@@ -172,6 +210,7 @@ function Evselector() {
             </div>
         </section>
         <section>
+            <h2 className="left">Where?</h2>
             <div style={{ width: 400 }}>
             <ReactSearchAutocomplete
                 items={items}
@@ -186,18 +225,119 @@ function Evselector() {
         </section>
         <br/>
         <section>
-        <div>
-        <Checkbox
-            label="Value 1"
-            value={checkedOne}
-            onChange={handleChangeOne}
-        />
-        <Checkbox
-            label="Value 2"
-            value={checkedTwo}
-            onChange={handleChangeTwo}
-        />
+        <div className="left">
+            <h2>What?</h2>
+            <p>Type of chargepoints needed:</p>
+            <ul className="no-bullet">
+                {chargeType.map(({ name, energy }, index) => {
+                return (
+                    <li key={index}>
+                    <div className="toppings-list-item">
+                        <div className="left-section">
+                        <input
+                            type="checkbox"
+                            id={`custom-checkbox-${index}`}
+                            name={name}
+                            value={name}
+                            checked={checkedState[index]}
+                            onChange={() => handleOnChange(index)}
+                        />
+                        <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                        </div>
+                    </div>
+                    </li>
+                );
+                })}
+            </ul>
+{/* 
+            <Checkbox
+                label="On street 7Kw"
+                value={checkedOne}
+                onChange={handleChangeOne}
+            />
+            <br />
+            <Checkbox
+                label="Workplace / destination"
+                value={checkedTwo}
+                onChange={handleChangeTwo}
+            />
+            <br />
+            <Checkbox
+                label="Rapid 50Kw"
+                value={checkedThree}
+                onChange={handleChangeTwo}
+            />
+            <br />
+            <Checkbox
+                label="Ultra fast 150Kw"
+                value={checkedFour}
+                onChange={handleChangeTwo}
+            />
+            <br />
+            <Checkbox
+                label="Charging cluster 7Kw"
+                value={checkedFive}
+                onChange={handleChangeTwo}
+            />
+            <br />
+            <Checkbox
+                label="Rapid charging cluster"
+                value={checkedSix}
+                onChange={handleChangeTwo}
+            />
+            <br /> */}
         </div>
+        </section>
+        <section>
+            <div className="left">
+            <h2>Why?</h2>
+            <p>What are your priority outcomes? choose up to five and rate importance</p>
+            <div className="container-row">
+                <div className="row-one">
+                    <Checkbox
+                        label="Improve air quality"
+                        value={checkedSix}
+                        onChange={handleChangeTwo}
+                    />
+                </div>
+                <div className="row-two">
+                <RangeSlider
+                    value={value}
+                    onChange={changeEvent => setValue(changeEvent.target.value)}
+                    min='0'
+                    max='10'
+                    size='sm'
+                />
+                {/* <h1>{value}</h1> */}
+                </div>
+            </div>
+            <div className="container-row">
+                <div className="row-one">
+                    <Checkbox
+                        label="Improve air quality"
+                        value={checkedSix}
+                        onChange={handleChangeTwo}
+                    />
+                </div>
+                <div className="row-two">
+                <RangeSlider
+                    value={value}
+                    onChange={changeEvent => setValue(changeEvent.target.value)}
+                    min='0'
+                    max='10'
+                    size='sm'
+                />
+                {/* <h1>{value}</h1> */}
+                </div>
+            </div>
+            </div>
+        </section>
+        <section>
+            <div className="left">
+                <h2>Select Your sites</h2>
+                <p>Pins to Add</p>
+                {/* <p>{selected}</p> */}
+            </div>
         </section>
         <section>
         <div className="row">
@@ -223,7 +363,6 @@ function Evselector() {
         <div className="details">
             <div>
                 <AddedPoints numbers= {mapLayers} />
-
             </div>
         </div>
         </div>

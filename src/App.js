@@ -7,6 +7,7 @@ import About from './pages/About';
 import ContactUs from './pages/ContactUs';
 import Tools from './pages/Tools';
 import Evselector from './pages/Evselector';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path='/evselector'>
           <Evselector />
+        </Route>
+        <Route path='/dashbaord'>
+          <Dashboard />
         </Route>
       </Switch>
   );

@@ -23,7 +23,7 @@ function MainPage() {
                   <div className="row-one">
                       <Link to="catalogue" className="no-underline"><h1 className="card-title">Get data</h1></Link>
                       <h3 className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
-                      <Link to='/'><h4 className="learnmore">Learn More </h4></Link>
+                      <Link to='/catalogue'><h4 className="learnmore">Learn More </h4></Link>
                   </div>
                   <div className="row-two">
                       <img className="image" src="https://www.1point21gws.com/insights/wp-content/uploads/2019/07/DATAx_Guide_to_Data_Visualization_in_2019_banner.jpg" alt="Logo"></img>
@@ -37,7 +37,7 @@ function MainPage() {
                   <div className="row-one">
                       <Link className="no-underline"><h1 className="card-title">View data</h1></Link>
                       <h3 className="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </h3>
-                      <Link to='/'><h4 className="learnmore">Learn More </h4></Link>
+                      <Link to='/dashbaord'><h4 className="learnmore">Learn More </h4></Link>
                   </div>
                   <div className="row-two">
                       <img className="image" src="https://cdn.ttgtmedia.com/visuals/ComputerWeekly/Hero%20Images/Big-data-hero-AdobeStock_389870710.jpg" alt="Logo"></img>
