@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700");
+@import url("https://fonts.googleapis.com/css?family=Volkhov:400italic");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700");
+@import url("https://fonts.googleapis.com/css?family=Bitter:700");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+
+.header {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.header li {
+  margin-left: 3rem;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: black;
+}
+
+.badge {
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  border-style: dotted;
+  border-color: black;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+}

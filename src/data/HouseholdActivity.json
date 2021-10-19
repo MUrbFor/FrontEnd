@@ -1,0 +1,2914 @@
+[
+  {
+    "LAD13NM": "Darlington",
+    "Code": "E06000005",
+    "AllHouseholds": 34300,
+    "Working": 20100,
+    "Mixed": 8100,
+    "Workless": 6100
+  },
+  {
+    "LAD13NM": "County Durham",
+    "Code": "E06000047",
+    "AllHouseholds": 178100,
+    "Working": 98000,
+    "Mixed": 45600,
+    "Workless": 34600
+  },
+  {
+    "LAD13NM": "Hartlepool",
+    "Code": "E06000001",
+    "AllHouseholds": 29600,
+    "Working": 14900,
+    "Mixed": 7000,
+    "Workless": 7800
+  },
+  {
+    "LAD13NM": "Middlesbrough",
+    "Code": "E06000002",
+    "AllHouseholds": 44600,
+    "Working": 20100,
+    "Mixed": 13800,
+    "Workless": 10600
+  },
+  {
+    "LAD13NM": "Northumberland",
+    "Code": "E06000057",
+    "AllHouseholds": 101300,
+    "Working": 55100,
+    "Mixed": 26300,
+    "Workless": 19900
+  },
+  {
+    "LAD13NM": "Redcar and Cleveland",
+    "Code": "E06000003",
+    "AllHouseholds": 41400,
+    "Working": 20000,
+    "Mixed": 11800,
+    "Workless": 9700
+  },
+  {
+    "LAD13NM": "Stockton-on-Tees",
+    "Code": "E06000004",
+    "AllHouseholds": 62700,
+    "Working": 34700,
+    "Mixed": 14700,
+    "Workless": 13200
+  },
+  {
+    "LAD13NM": "Gateshead",
+    "Code": "E08000037",
+    "AllHouseholds": 67400,
+    "Working": 38600,
+    "Mixed": 16500,
+    "Workless": 12300
+  },
+  {
+    "LAD13NM": "Newcastle upon Tyne",
+    "Code": "E08000021",
+    "AllHouseholds": 99000,
+    "Working": 53500,
+    "Mixed": 26000,
+    "Workless": 19500
+  },
+  {
+    "LAD13NM": "North Tyneside",
+    "Code": "E08000022",
+    "AllHouseholds": 66400,
+    "Working": 40000,
+    "Mixed": 16000,
+    "Workless": 10400
+  },
+  {
+    "LAD13NM": "South Tyneside",
+    "Code": "E08000023",
+    "AllHouseholds": 48300,
+    "Working": 25000,
+    "Mixed": 11300,
+    "Workless": 12000
+  },
+  {
+    "LAD13NM": "Sunderland",
+    "Code": "E08000024",
+    "AllHouseholds": 91500,
+    "Working": 47800,
+    "Mixed": 24400,
+    "Workless": 19200
+  },
+  {
+    "LAD13NM": "Blackburn with Darwen",
+    "Code": "E06000008",
+    "AllHouseholds": 43900,
+    "Working": 21100,
+    "Mixed": 15500,
+    "Workless": 7300
+  },
+  {
+    "LAD13NM": "Blackpool",
+    "Code": "E06000009",
+    "AllHouseholds": 43200,
+    "Working": 24100,
+    "Mixed": 10500,
+    "Workless": 8600
+  },
+  {
+    "LAD13NM": "Cheshire East",
+    "Code": "E06000049",
+    "AllHouseholds": 123800,
+    "Working": 82700,
+    "Mixed": 26900,
+    "Workless": 14100
+  },
+  {
+    "LAD13NM": "Cheshire West and Chester",
+    "Code": "E06000050",
+    "AllHouseholds": 110800,
+    "Working": 67500,
+    "Mixed": 29600,
+    "Workless": 13700
+  },
+  {
+    "LAD13NM": "Halton",
+    "Code": "E06000006",
+    "AllHouseholds": 40600,
+    "Working": 24700,
+    "Mixed": 9600,
+    "Workless": 6300
+  },
+  {
+    "LAD13NM": "Warrington",
+    "Code": "E06000007",
+    "AllHouseholds": 62900,
+    "Working": 40300,
+    "Mixed": 16300,
+    "Workless": 6300
+  },
+  {
+    "LAD13NM": "Allerdale",
+    "Code": "E07000026",
+    "AllHouseholds": 31800,
+    "Working": 23200,
+    "Mixed": 5500,
+    "Workless": 3100
+  },
+  {
+    "LAD13NM": "Barrow-in-Furness",
+    "Code": "E07000027",
+    "AllHouseholds": 23500,
+    "Working": 11600,
+    "Mixed": 5500,
+    "Workless": 6500
+  },
+  {
+    "LAD13NM": "Carlisle",
+    "Code": "E07000028",
+    "AllHouseholds": 35800,
+    "Working": 24200,
+    "Mixed": 8000,
+    "Workless": 3600
+  },
+  {
+    "LAD13NM": "Copeland",
+    "Code": "E07000029",
+    "AllHouseholds": 22400,
+    "Working": 11700,
+    "Mixed": 6700,
+    "Workless": 4000
+  },
+  {
+    "LAD13NM": "Eden",
+    "Code": "E07000030",
+    "AllHouseholds": 17300,
+    "Working": 14000,
+    "Mixed": 1600,
+    "Workless": 1700
+  },
+  {
+    "LAD13NM": "South Lakeland",
+    "Code": "E07000031",
+    "AllHouseholds": 32600,
+    "Working": 22100,
+    "Mixed": 7000,
+    "Workless": 3500
+  },
+  {
+    "LAD13NM": "Bolton",
+    "Code": "E08000001",
+    "AllHouseholds": 87300,
+    "Working": 46000,
+    "Mixed": 26600,
+    "Workless": 14700
+  },
+  {
+    "LAD13NM": "Bury",
+    "Code": "E08000002",
+    "AllHouseholds": 58800,
+    "Working": 33200,
+    "Mixed": 16600,
+    "Workless": 8900
+  },
+  {
+    "LAD13NM": "Manchester",
+    "Code": "E08000003",
+    "AllHouseholds": 192200,
+    "Working": 97600,
+    "Mixed": 59400,
+    "Workless": 35200
+  },
+  {
+    "LAD13NM": "Oldham",
+    "Code": "E08000004",
+    "AllHouseholds": 69200,
+    "Working": 40000,
+    "Mixed": 19600,
+    "Workless": 9600
+  },
+  {
+    "LAD13NM": "Rochdale",
+    "Code": "E08000005",
+    "AllHouseholds": 64700,
+    "Working": 34000,
+    "Mixed": 19500,
+    "Workless": 11200
+  },
+  {
+    "LAD13NM": "Salford",
+    "Code": "E08000006",
+    "AllHouseholds": 88200,
+    "Working": 53900,
+    "Mixed": 20800,
+    "Workless": 13500
+  },
+  {
+    "LAD13NM": "Stockport",
+    "Code": "E08000007",
+    "AllHouseholds": 91000,
+    "Working": 55700,
+    "Mixed": 20600,
+    "Workless": 14800
+  },
+  {
+    "LAD13NM": "Tameside",
+    "Code": "E08000008",
+    "AllHouseholds": 76700,
+    "Working": 45300,
+    "Mixed": 17600,
+    "Workless": 13700
+  },
+  {
+    "LAD13NM": "Trafford",
+    "Code": "E08000009",
+    "AllHouseholds": 73500,
+    "Working": 46100,
+    "Mixed": 19700,
+    "Workless": 7700
+  },
+  {
+    "LAD13NM": "Wigan",
+    "Code": "E08000010",
+    "AllHouseholds": 105500,
+    "Working": 60600,
+    "Mixed": 27400,
+    "Workless": 17400
+  },
+  {
+    "LAD13NM": "Burnley",
+    "Code": "E07000117",
+    "AllHouseholds": 31300,
+    "Working": 18400,
+    "Mixed": 6300,
+    "Workless": 6700
+  },
+  {
+    "LAD13NM": "Chorley",
+    "Code": "E07000118",
+    "AllHouseholds": 33400,
+    "Working": 20300,
+    "Mixed": 9800,
+    "Workless": 3200
+  },
+  {
+    "LAD13NM": "Fylde",
+    "Code": "E07000119",
+    "AllHouseholds": 23400,
+    "Working": 17300,
+    "Mixed": 2900,
+    "Workless": 3200
+  },
+  {
+    "LAD13NM": "Hyndburn",
+    "Code": "E07000120",
+    "AllHouseholds": 24700,
+    "Working": 16300,
+    "Mixed": 5000,
+    "Workless": 3400
+  },
+  {
+    "LAD13NM": "Lancaster",
+    "Code": "E07000121",
+    "AllHouseholds": 45500,
+    "Working": 24200,
+    "Mixed": 12100,
+    "Workless": 9200
+  },
+  {
+    "LAD13NM": "Pendle",
+    "Code": "E07000122",
+    "AllHouseholds": 27100,
+    "Working": 15200,
+    "Mixed": 8500,
+    "Workless": 3500
+  },
+  {
+    "LAD13NM": "Preston",
+    "Code": "E07000123",
+    "AllHouseholds": 47800,
+    "Working": 32600,
+    "Mixed": 10400,
+    "Workless": 4900
+  },
+  {
+    "LAD13NM": "Ribble Valley",
+    "Code": "E07000124",
+    "AllHouseholds": 19200,
+    "Working": 13000,
+    "Mixed": 4200,
+    "Workless": 2000
+  },
+  {
+    "LAD13NM": "Rossendale",
+    "Code": "E07000125",
+    "AllHouseholds": 24500,
+    "Working": 16300,
+    "Mixed": 5900,
+    "Workless": 2200
+  },
+  {
+    "LAD13NM": "South Ribble",
+    "Code": "E07000126",
+    "AllHouseholds": 35800,
+    "Working": 26100,
+    "Mixed": 8100,
+    "Workless": 1600
+  },
+  {
+    "LAD13NM": "West Lancashire",
+    "Code": "E07000127",
+    "AllHouseholds": 34500,
+    "Working": 16400,
+    "Mixed": 10100,
+    "Workless": 8000
+  },
+  {
+    "LAD13NM": "Wyre",
+    "Code": "E07000128",
+    "AllHouseholds": 33600,
+    "Working": 21200,
+    "Mixed": 7300,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "Knowsley",
+    "Code": "E08000011",
+    "AllHouseholds": 46800,
+    "Working": 25700,
+    "Mixed": 12800,
+    "Workless": 8300
+  },
+  {
+    "LAD13NM": "Liverpool",
+    "Code": "E08000012",
+    "AllHouseholds": 164700,
+    "Working": 85500,
+    "Mixed": 42400,
+    "Workless": 36800
+  },
+  {
+    "LAD13NM": "Sefton",
+    "Code": "E08000014",
+    "AllHouseholds": 81500,
+    "Working": 43500,
+    "Mixed": 23700,
+    "Workless": 14300
+  },
+  {
+    "LAD13NM": "St. Helens",
+    "Code": "E08000013",
+    "AllHouseholds": 59300,
+    "Working": 34600,
+    "Mixed": 14400,
+    "Workless": 10200
+  },
+  {
+    "LAD13NM": "Wirral",
+    "Code": "E08000015",
+    "AllHouseholds": 101100,
+    "Working": 60400,
+    "Mixed": 24700,
+    "Workless": 15900
+  },
+  {
+    "LAD13NM": "East Riding of Yorkshire",
+    "Code": "E06000011",
+    "AllHouseholds": 98300,
+    "Working": 59200,
+    "Mixed": 26500,
+    "Workless": 12600
+  },
+  {
+    "LAD13NM": "Kingston upon Hull, City of",
+    "Code": "E06000010",
+    "AllHouseholds": 91800,
+    "Working": 50200,
+    "Mixed": 23400,
+    "Workless": 18300
+  },
+  {
+    "LAD13NM": "North East Lincolnshire",
+    "Code": "E06000012",
+    "AllHouseholds": 48900,
+    "Working": 26300,
+    "Mixed": 12600,
+    "Workless": 10000
+  },
+  {
+    "LAD13NM": "North Lincolnshire",
+    "Code": "E06000013",
+    "AllHouseholds": 55000,
+    "Working": 30300,
+    "Mixed": 14600,
+    "Workless": 10100
+  },
+  {
+    "LAD13NM": "York",
+    "Code": "E06000014",
+    "AllHouseholds": 66700,
+    "Working": 42800,
+    "Mixed": 14900,
+    "Workless": 9000
+  },
+  {
+    "LAD13NM": "Craven",
+    "Code": "E07000163",
+    "AllHouseholds": 17700,
+    "Working": 9200,
+    "Mixed": 5800,
+    "Workless": 2600
+  },
+  {
+    "LAD13NM": "Hambleton",
+    "Code": "E07000164",
+    "AllHouseholds": 25800,
+    "Working": 17000,
+    "Mixed": 6200,
+    "Workless": 2700
+  },
+  {
+    "LAD13NM": "Harrogate",
+    "Code": "E07000165",
+    "AllHouseholds": 47000,
+    "Working": 31800,
+    "Mixed": 13100,
+    "Workless": 2100
+  },
+  {
+    "LAD13NM": "Richmondshire",
+    "Code": "E07000166",
+    "AllHouseholds": 17100,
+    "Working": 11200,
+    "Mixed": 4800,
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "Ryedale",
+    "Code": "E07000167",
+    "AllHouseholds": 17100,
+    "Working": 10300,
+    "Mixed": 5900,
+    "Workless": 900
+  },
+  {
+    "LAD13NM": "Scarborough",
+    "Code": "E07000168",
+    "AllHouseholds": 34100,
+    "Working": 23100,
+    "Mixed": 6700,
+    "Workless": 4300
+  },
+  {
+    "LAD13NM": "Selby",
+    "Code": "E07000169",
+    "AllHouseholds": 30900,
+    "Working": 16800,
+    "Mixed": 9900,
+    "Workless": 4200
+  },
+  {
+    "LAD13NM": "Barnsley",
+    "Code": "E08000016",
+    "AllHouseholds": 77200,
+    "Working": 44700,
+    "Mixed": 22500,
+    "Workless": 10000
+  },
+  {
+    "LAD13NM": "Doncaster",
+    "Code": "E08000017",
+    "AllHouseholds": 95900,
+    "Working": 53000,
+    "Mixed": 25800,
+    "Workless": 17100
+  },
+  {
+    "LAD13NM": "Rotherham",
+    "Code": "E08000018",
+    "AllHouseholds": 83500,
+    "Working": 45800,
+    "Mixed": 21600,
+    "Workless": 16000
+  },
+  {
+    "LAD13NM": "Sheffield",
+    "Code": "E08000019",
+    "AllHouseholds": 193600,
+    "Working": 113100,
+    "Mixed": 51200,
+    "Workless": 29300
+  },
+  {
+    "LAD13NM": "Bradford",
+    "Code": "E08000032",
+    "AllHouseholds": 154500,
+    "Working": 73900,
+    "Mixed": 52900,
+    "Workless": 27800
+  },
+  {
+    "LAD13NM": "Calderdale",
+    "Code": "E08000033",
+    "AllHouseholds": 69300,
+    "Working": 38900,
+    "Mixed": 19100,
+    "Workless": 11400
+  },
+  {
+    "LAD13NM": "Kirklees",
+    "Code": "E08000034",
+    "AllHouseholds": 139600,
+    "Working": 79000,
+    "Mixed": 44000,
+    "Workless": 16700
+  },
+  {
+    "LAD13NM": "Leeds",
+    "Code": "E08000035",
+    "AllHouseholds": 275800,
+    "Working": 170400,
+    "Mixed": 68800,
+    "Workless": 36600
+  },
+  {
+    "LAD13NM": "Wakefield",
+    "Code": "E08000036",
+    "AllHouseholds": 112500,
+    "Working": 67100,
+    "Mixed": 25800,
+    "Workless": 19700
+  },
+  {
+    "LAD13NM": "Derby",
+    "Code": "E06000015",
+    "AllHouseholds": 83700,
+    "Working": 47300,
+    "Mixed": 23100,
+    "Workless": 13300
+  },
+  {
+    "LAD13NM": "Leicester",
+    "Code": "E06000016",
+    "AllHouseholds": 110100,
+    "Working": 55500,
+    "Mixed": 41700,
+    "Workless": 12900
+  },
+  {
+    "LAD13NM": "Nottingham",
+    "Code": "E06000018",
+    "AllHouseholds": 113000,
+    "Working": 60500,
+    "Mixed": 27300,
+    "Workless": 25200
+  },
+  {
+    "LAD13NM": "Rutland",
+    "Code": "E06000017",
+    "AllHouseholds": 10400,
+    "Working": 6400,
+    "Mixed": 2600,
+    "Workless": 1400
+  },
+  {
+    "LAD13NM": "Amber Valley",
+    "Code": "E07000032",
+    "AllHouseholds": 47000,
+    "Working": 32700,
+    "Mixed": 9200,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "Bolsover",
+    "Code": "E07000033",
+    "AllHouseholds": 26500,
+    "Working": 13200,
+    "Mixed": 7200,
+    "Workless": 6100
+  },
+  {
+    "LAD13NM": "Chesterfield",
+    "Code": "E07000034",
+    "AllHouseholds": 36700,
+    "Working": 18200,
+    "Mixed": 8500,
+    "Workless": 10000
+  },
+  {
+    "LAD13NM": "Derbyshire Dales",
+    "Code": "E07000035",
+    "AllHouseholds": 22500,
+    "Working": 14200,
+    "Mixed": 6100,
+    "Workless": 2300
+  },
+  {
+    "LAD13NM": "Erewash",
+    "Code": "E07000036",
+    "AllHouseholds": 38200,
+    "Working": 25000,
+    "Mixed": 10300,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "High Peak",
+    "Code": "E07000037",
+    "AllHouseholds": 31600,
+    "Working": 17300,
+    "Mixed": 9200,
+    "Workless": 5200
+  },
+  {
+    "LAD13NM": "North East Derbyshire",
+    "Code": "E07000038",
+    "AllHouseholds": 29000,
+    "Working": 16200,
+    "Mixed": 7600,
+    "Workless": 5200
+  },
+  {
+    "LAD13NM": "South Derbyshire",
+    "Code": "E07000039",
+    "AllHouseholds": 34700,
+    "Working": 25800,
+    "Mixed": 6500,
+    "Workless": 2400
+  },
+  {
+    "LAD13NM": "Blaby",
+    "Code": "E07000129",
+    "AllHouseholds": 29600,
+    "Working": 18900,
+    "Mixed": 9200,
+    "Workless": 1500
+  },
+  {
+    "LAD13NM": "Charnwood",
+    "Code": "E07000130",
+    "AllHouseholds": 62400,
+    "Working": 37800,
+    "Mixed": 14800,
+    "Workless": 9800
+  },
+  {
+    "LAD13NM": "Harborough",
+    "Code": "E07000131",
+    "AllHouseholds": 26200,
+    "Working": 17700,
+    "Mixed": 7100,
+    "Workless": 1400
+  },
+  {
+    "LAD13NM": "Hinckley and Bosworth",
+    "Code": "E07000132",
+    "AllHouseholds": 36600,
+    "Working": 27100,
+    "Mixed": 7800,
+    "Workless": 1700
+  },
+  {
+    "LAD13NM": "Melton",
+    "Code": "E07000133",
+    "AllHouseholds": 15600,
+    "Working": 11200,
+    "Mixed": 2900,
+    "Workless": 1500
+  },
+  {
+    "LAD13NM": "North West Leicestershire",
+    "Code": "E07000134",
+    "AllHouseholds": 33400,
+    "Working": 19900,
+    "Mixed": 6900,
+    "Workless": 6600
+  },
+  {
+    "LAD13NM": "Oadby and Wigston",
+    "Code": "E07000135",
+    "AllHouseholds": 15100,
+    "Working": 8500,
+    "Mixed": 5700,
+    "Workless": 900
+  },
+  {
+    "LAD13NM": "Boston",
+    "Code": "E07000136",
+    "AllHouseholds": 21400,
+    "Working": 12600,
+    "Mixed": 6200,
+    "Workless": 2600
+  },
+  {
+    "LAD13NM": "East Lindsey",
+    "Code": "E07000137",
+    "AllHouseholds": 48900,
+    "Working": 25400,
+    "Mixed": 12700,
+    "Workless": 10800
+  },
+  {
+    "LAD13NM": "Lincoln",
+    "Code": "E07000138",
+    "AllHouseholds": 32700,
+    "Working": 17400,
+    "Mixed": 12000,
+    "Workless": 3300
+  },
+  {
+    "LAD13NM": "North Kesteven",
+    "Code": "E07000139",
+    "AllHouseholds": 33700,
+    "Working": 21200,
+    "Mixed": 9600,
+    "Workless": 2900
+  },
+  {
+    "LAD13NM": "South Holland",
+    "Code": "E07000140",
+    "AllHouseholds": 27900,
+    "Working": 16800,
+    "Mixed": 6900,
+    "Workless": 4300
+  },
+  {
+    "LAD13NM": "South Kesteven",
+    "Code": "E07000141",
+    "AllHouseholds": 42800,
+    "Working": 25100,
+    "Mixed": 12000,
+    "Workless": 5600
+  },
+  {
+    "LAD13NM": "West Lindsey",
+    "Code": "E07000142",
+    "AllHouseholds": 27200,
+    "Working": 17700,
+    "Mixed": 5600,
+    "Workless": 3800
+  },
+  {
+    "LAD13NM": "Ashfield",
+    "Code": "E07000170",
+    "AllHouseholds": 43800,
+    "Working": 28700,
+    "Mixed": 11100,
+    "Workless": 3900
+  },
+  {
+    "LAD13NM": "Bassetlaw",
+    "Code": "E07000171",
+    "AllHouseholds": 38700,
+    "Working": 27100,
+    "Mixed": 6700,
+    "Workless": 4900
+  },
+  {
+    "LAD13NM": "Broxtowe",
+    "Code": "E07000172",
+    "AllHouseholds": 39100,
+    "Working": 23200,
+    "Mixed": 11700,
+    "Workless": 4100
+  },
+  {
+    "LAD13NM": "Gedling",
+    "Code": "E07000173",
+    "AllHouseholds": 42800,
+    "Working": 27100,
+    "Mixed": 12700,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Mansfield",
+    "Code": "E07000174",
+    "AllHouseholds": 38400,
+    "Working": 24200,
+    "Mixed": 6900,
+    "Workless": 7200
+  },
+  {
+    "LAD13NM": "Newark and Sherwood",
+    "Code": "E07000175",
+    "AllHouseholds": 39400,
+    "Working": 21900,
+    "Mixed": 11600,
+    "Workless": 5900
+  },
+  {
+    "LAD13NM": "Rushcliffe",
+    "Code": "E07000176",
+    "AllHouseholds": 36800,
+    "Working": 26000,
+    "Mixed": 8100,
+    "Workless": 2600
+  },
+  {
+    "LAD13NM": "North Northamptonshire",
+    "Code": "E06000061",
+    "AllHouseholds": 114000,
+    "Working": 74600,
+    "Mixed": 28400,
+    "Workless": 11000
+  },
+  {
+    "LAD13NM": "West Northamptonshire",
+    "Code": "E06000062",
+    "AllHouseholds": 131000,
+    "Working": 85600,
+    "Mixed": 32100,
+    "Workless": 13300
+  },
+  {
+    "LAD13NM": "Herefordshire, County of",
+    "Code": "E06000019",
+    "AllHouseholds": 54600,
+    "Working": 35900,
+    "Mixed": 11600,
+    "Workless": 7100
+  },
+  {
+    "LAD13NM": "Shropshire",
+    "Code": "E06000051",
+    "AllHouseholds": 93500,
+    "Working": 58200,
+    "Mixed": 24900,
+    "Workless": 10400
+  },
+  {
+    "LAD13NM": "Stoke-on-Trent",
+    "Code": "E06000021",
+    "AllHouseholds": 85000,
+    "Working": 47900,
+    "Mixed": 22900,
+    "Workless": 14100
+  },
+  {
+    "LAD13NM": "Telford and Wrekin",
+    "Code": "E06000020",
+    "AllHouseholds": 56600,
+    "Working": 34100,
+    "Mixed": 14300,
+    "Workless": 8200
+  },
+  {
+    "LAD13NM": "Cannock Chase",
+    "Code": "E07000192",
+    "AllHouseholds": 30800,
+    "Working": 21900,
+    "Mixed": 3400,
+    "Workless": 5500
+  },
+  {
+    "LAD13NM": "East Staffordshire",
+    "Code": "E07000193",
+    "AllHouseholds": 37200,
+    "Working": 25900,
+    "Mixed": 7100,
+    "Workless": 4200
+  },
+  {
+    "LAD13NM": "Lichfield",
+    "Code": "E07000194",
+    "AllHouseholds": 32400,
+    "Working": 19100,
+    "Mixed": 8600,
+    "Workless": 4600
+  },
+  {
+    "LAD13NM": "Newcastle-under-Lyme",
+    "Code": "E07000195",
+    "AllHouseholds": 41100,
+    "Working": 24800,
+    "Mixed": 10400,
+    "Workless": 5900
+  },
+  {
+    "LAD13NM": "South Staffordshire",
+    "Code": "E07000196",
+    "AllHouseholds": 33500,
+    "Working": 23900,
+    "Mixed": 6200,
+    "Workless": 3400
+  },
+  {
+    "LAD13NM": "Stafford",
+    "Code": "E07000197",
+    "AllHouseholds": 49200,
+    "Working": 29200,
+    "Mixed": 11800,
+    "Workless": 8200
+  },
+  {
+    "LAD13NM": "Staffordshire Moorlands",
+    "Code": "E07000198",
+    "AllHouseholds": 30700,
+    "Working": 18800,
+    "Mixed": 7500,
+    "Workless": 4500
+  },
+  {
+    "LAD13NM": "Tamworth",
+    "Code": "E07000199",
+    "AllHouseholds": 25900,
+    "Working": 18100,
+    "Mixed": 4600,
+    "Workless": 3200
+  },
+  {
+    "LAD13NM": "North Warwickshire",
+    "Code": "E07000218",
+    "AllHouseholds": 21100,
+    "Working": 13600,
+    "Mixed": 5300,
+    "Workless": 2300
+  },
+  {
+    "LAD13NM": "Nuneaton and Bedworth",
+    "Code": "E07000219",
+    "AllHouseholds": 40700,
+    "Working": 24700,
+    "Mixed": 10600,
+    "Workless": 5500
+  },
+  {
+    "LAD13NM": "Rugby",
+    "Code": "E07000220",
+    "AllHouseholds": 36100,
+    "Working": 24200,
+    "Mixed": 7700,
+    "Workless": 4200
+  },
+  {
+    "LAD13NM": "Stratford-on-Avon",
+    "Code": "E07000221",
+    "AllHouseholds": 37400,
+    "Working": 25200,
+    "Mixed": 8100,
+    "Workless": 4100
+  },
+  {
+    "LAD13NM": "Warwick",
+    "Code": "E07000222",
+    "AllHouseholds": 48000,
+    "Working": 31200,
+    "Mixed": 12100,
+    "Workless": 4700
+  },
+  {
+    "LAD13NM": "Birmingham",
+    "Code": "E08000025",
+    "AllHouseholds": 351000,
+    "Working": 169200,
+    "Mixed": 123000,
+    "Workless": 58800
+  },
+  {
+    "LAD13NM": "Coventry",
+    "Code": "E08000026",
+    "AllHouseholds": 116000,
+    "Working": 60200,
+    "Mixed": 35800,
+    "Workless": 20100
+  },
+  {
+    "LAD13NM": "Dudley",
+    "Code": "E08000027",
+    "AllHouseholds": 93600,
+    "Working": 49500,
+    "Mixed": 27200,
+    "Workless": 17000
+  },
+  {
+    "LAD13NM": "Sandwell",
+    "Code": "E08000028",
+    "AllHouseholds": 100000,
+    "Working": 48800,
+    "Mixed": 32500,
+    "Workless": 18700
+  },
+  {
+    "LAD13NM": "Solihull",
+    "Code": "E08000029",
+    "AllHouseholds": 62100,
+    "Working": 35400,
+    "Mixed": 19400,
+    "Workless": 7200
+  },
+  {
+    "LAD13NM": "Walsall",
+    "Code": "E08000030",
+    "AllHouseholds": 81900,
+    "Working": 42500,
+    "Mixed": 25100,
+    "Workless": 14300
+  },
+  {
+    "LAD13NM": "Wolverhampton",
+    "Code": "E08000031",
+    "AllHouseholds": 79800,
+    "Working": 38400,
+    "Mixed": 22600,
+    "Workless": 18800
+  },
+  {
+    "LAD13NM": "Bromsgrove",
+    "Code": "E07000234",
+    "AllHouseholds": 28000,
+    "Working": 17000,
+    "Mixed": 7100,
+    "Workless": 3900
+  },
+  {
+    "LAD13NM": "Malvern Hills",
+    "Code": "E07000235",
+    "AllHouseholds": 23300,
+    "Working": 11200,
+    "Mixed": 7000,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "Redditch",
+    "Code": "E07000236",
+    "AllHouseholds": 25700,
+    "Working": 17200,
+    "Mixed": 6500,
+    "Workless": 1900
+  },
+  {
+    "LAD13NM": "Worcester",
+    "Code": "E07000237",
+    "AllHouseholds": 34300,
+    "Working": 22400,
+    "Mixed": 8300,
+    "Workless": 3600
+  },
+  {
+    "LAD13NM": "Wychavon",
+    "Code": "E07000238",
+    "AllHouseholds": 37400,
+    "Working": 22700,
+    "Mixed": 9500,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "Wyre Forest",
+    "Code": "E07000239",
+    "AllHouseholds": 31800,
+    "Working": 20100,
+    "Mixed": 7900,
+    "Workless": 3900
+  },
+  {
+    "LAD13NM": "Bedford",
+    "Code": "E06000055",
+    "AllHouseholds": 59500,
+    "Working": 37400,
+    "Mixed": 13600,
+    "Workless": 8500
+  },
+  {
+    "LAD13NM": "Central Bedfordshire",
+    "Code": "E06000056",
+    "AllHouseholds": 85500,
+    "Working": 52200,
+    "Mixed": 25400,
+    "Workless": 7900
+  },
+  {
+    "LAD13NM": "Luton",
+    "Code": "E06000032",
+    "AllHouseholds": 58800,
+    "Working": 29000,
+    "Mixed": 23700,
+    "Workless": 6100
+  },
+  {
+    "LAD13NM": "Peterborough",
+    "Code": "E06000031",
+    "AllHouseholds": 62400,
+    "Working": 37900,
+    "Mixed": 15000,
+    "Workless": 9500
+  },
+  {
+    "LAD13NM": "Southend-on-Sea",
+    "Code": "E06000033",
+    "AllHouseholds": 55400,
+    "Working": 33900,
+    "Mixed": 14300,
+    "Workless": 7200
+  },
+  {
+    "LAD13NM": "Thurrock",
+    "Code": "E06000034",
+    "AllHouseholds": 52500,
+    "Working": 31600,
+    "Mixed": 15000,
+    "Workless": 5900
+  },
+  {
+    "LAD13NM": "Cambridge",
+    "Code": "E07000008",
+    "AllHouseholds": 47400,
+    "Working": 31200,
+    "Mixed": 11200,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "East Cambridgeshire",
+    "Code": "E07000009",
+    "AllHouseholds": 29400,
+    "Working": 19700,
+    "Mixed": 7700,
+    "Workless": 1900
+  },
+  {
+    "LAD13NM": "Fenland",
+    "Code": "E07000010",
+    "AllHouseholds": 33400,
+    "Working": 18200,
+    "Mixed": 8400,
+    "Workless": 6900
+  },
+  {
+    "LAD13NM": "Huntingdonshire",
+    "Code": "E07000011",
+    "AllHouseholds": 56900,
+    "Working": 35100,
+    "Mixed": 16400,
+    "Workless": 5400
+  },
+  {
+    "LAD13NM": "South Cambridgeshire",
+    "Code": "E07000012",
+    "AllHouseholds": 46100,
+    "Working": 31100,
+    "Mixed": 11800,
+    "Workless": 3200
+  },
+  {
+    "LAD13NM": "Basildon",
+    "Code": "E07000066",
+    "AllHouseholds": 61400,
+    "Working": 39300,
+    "Mixed": 15100,
+    "Workless": 7000
+  },
+  {
+    "LAD13NM": "Braintree",
+    "Code": "E07000067",
+    "AllHouseholds": 51400,
+    "Working": 33200,
+    "Mixed": 10400,
+    "Workless": 7700
+  },
+  {
+    "LAD13NM": "Brentwood",
+    "Code": "E07000068",
+    "AllHouseholds": 21700,
+    "Working": 12400,
+    "Mixed": 8300,
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "Castle Point",
+    "Code": "E07000069",
+    "AllHouseholds": 26700,
+    "Working": 15600,
+    "Mixed": 9500,
+    "Workless": 1600
+  },
+  {
+    "LAD13NM": "Chelmsford",
+    "Code": "E07000070",
+    "AllHouseholds": 54800,
+    "Working": 37500,
+    "Mixed": 11600,
+    "Workless": 5700
+  },
+  {
+    "LAD13NM": "Colchester",
+    "Code": "E07000071",
+    "AllHouseholds": 62200,
+    "Working": 34900,
+    "Mixed": 17700,
+    "Workless": 9600
+  },
+  {
+    "LAD13NM": "Epping Forest",
+    "Code": "E07000072",
+    "AllHouseholds": 43000,
+    "Working": 26300,
+    "Mixed": 12800,
+    "Workless": 3800
+  },
+  {
+    "LAD13NM": "Harlow",
+    "Code": "E07000073",
+    "AllHouseholds": 29500,
+    "Working": 16600,
+    "Mixed": 8000,
+    "Workless": 4800
+  },
+  {
+    "LAD13NM": "Maldon",
+    "Code": "E07000074",
+    "AllHouseholds": 19100,
+    "Working": 12500,
+    "Mixed": 5700,
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "Rochford",
+    "Code": "E07000075",
+    "AllHouseholds": 28100,
+    "Working": 20100,
+    "Mixed": 4600,
+    "Workless": 3400
+  },
+  {
+    "LAD13NM": "Tendring",
+    "Code": "E07000076",
+    "AllHouseholds": 43400,
+    "Working": 20700,
+    "Mixed": 11600,
+    "Workless": 11200
+  },
+  {
+    "LAD13NM": "Uttlesford",
+    "Code": "E07000077",
+    "AllHouseholds": 27400,
+    "Working": 18900,
+    "Mixed": 5500,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Broxbourne",
+    "Code": "E07000095",
+    "AllHouseholds": 31100,
+    "Working": 17000,
+    "Mixed": 10300,
+    "Workless": 3800
+  },
+  {
+    "LAD13NM": "Dacorum",
+    "Code": "E07000096",
+    "AllHouseholds": 51300,
+    "Working": 33600,
+    "Mixed": 12500,
+    "Workless": 5200
+  },
+  {
+    "LAD13NM": "East Hertfordshire",
+    "Code": "E07000242",
+    "AllHouseholds": 45300,
+    "Working": 28800,
+    "Mixed": 10800,
+    "Workless": 5800
+  },
+  {
+    "LAD13NM": "Hertsmere",
+    "Code": "E07000098",
+    "AllHouseholds": 33600,
+    "Working": 22900,
+    "Mixed": 7600,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "North Hertfordshire",
+    "Code": "E07000099",
+    "AllHouseholds": 41800,
+    "Working": 27500,
+    "Mixed": 12400,
+    "Workless": 1900
+  },
+  {
+    "LAD13NM": "St Albans",
+    "Code": "E07000240",
+    "AllHouseholds": 43400,
+    "Working": 23000,
+    "Mixed": 16300,
+    "Workless": 4100
+  },
+  {
+    "LAD13NM": "Stevenage",
+    "Code": "E07000243",
+    "AllHouseholds": 27800,
+    "Working": 17400,
+    "Mixed": 7400,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Three Rivers",
+    "Code": "E07000102",
+    "AllHouseholds": 29000,
+    "Working": 18200,
+    "Mixed": 7700,
+    "Workless": 3200
+  },
+  {
+    "LAD13NM": "Watford",
+    "Code": "E07000103",
+    "AllHouseholds": 33500,
+    "Working": 22800,
+    "Mixed": 7900,
+    "Workless": 2800
+  },
+  {
+    "LAD13NM": "Welwyn Hatfield",
+    "Code": "E07000241",
+    "AllHouseholds": 41200,
+    "Working": 23600,
+    "Mixed": 15000,
+    "Workless": 2600
+  },
+  {
+    "LAD13NM": "Breckland",
+    "Code": "E07000143",
+    "AllHouseholds": 42800,
+    "Working": 27400,
+    "Mixed": 8600,
+    "Workless": 6800
+  },
+  {
+    "LAD13NM": "Broadland",
+    "Code": "E07000144",
+    "AllHouseholds": 40200,
+    "Working": 27200,
+    "Mixed": 10000,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Great Yarmouth",
+    "Code": "E07000145",
+    "AllHouseholds": 28800,
+    "Working": 13700,
+    "Mixed": 10100,
+    "Workless": 5000
+  },
+  {
+    "LAD13NM": "King's Lynn and West Norfolk",
+    "Code": "E07000146",
+    "AllHouseholds": 44900,
+    "Working": 26100,
+    "Mixed": 15100,
+    "Workless": 3600
+  },
+  {
+    "LAD13NM": "North Norfolk",
+    "Code": "E07000147",
+    "AllHouseholds": 28400,
+    "Working": 14700,
+    "Mixed": 7500,
+    "Workless": 6200
+  },
+  {
+    "LAD13NM": "Norwich",
+    "Code": "E07000148",
+    "AllHouseholds": 50300,
+    "Working": 29800,
+    "Mixed": 12400,
+    "Workless": 8100
+  },
+  {
+    "LAD13NM": "South Norfolk",
+    "Code": "E07000149",
+    "AllHouseholds": 45800,
+    "Working": 32600,
+    "Mixed": 9000,
+    "Workless": 4100
+  },
+  {
+    "LAD13NM": "Babergh",
+    "Code": "E07000200",
+    "AllHouseholds": 28000,
+    "Working": 15700,
+    "Mixed": 8200,
+    "Workless": 4100
+  },
+  {
+    "LAD13NM": "Ipswich",
+    "Code": "E07000202",
+    "AllHouseholds": 49500,
+    "Working": 28800,
+    "Mixed": 13900,
+    "Workless": 6800
+  },
+  {
+    "LAD13NM": "Mid Suffolk",
+    "Code": "E07000203",
+    "AllHouseholds": 31300,
+    "Working": 22400,
+    "Mixed": 6000,
+    "Workless": 2900
+  },
+  {
+    "LAD13NM": "East Suffolk",
+    "Code": "E07000244",
+    "AllHouseholds": 76900,
+    "Working": 46900,
+    "Mixed": 19600,
+    "Workless": 10400
+  },
+  {
+    "LAD13NM": "West Suffolk",
+    "Code": "E07000245",
+    "AllHouseholds": 59900,
+    "Working": 40800,
+    "Mixed": 11800,
+    "Workless": 7400
+  },
+  {
+    "LAD13NM": "Camden",
+    "Code": "E09000007",
+    "AllHouseholds": 96800,
+    "Working": 52100,
+    "Mixed": 27400,
+    "Workless": 17300
+  },
+  {
+    "LAD13NM": "City of London",
+    "Code": "E09000001",
+    "AllHouseholds": 4500,
+    "Working": 3500,
+    "Mixed": "!",
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "Hackney",
+    "Code": "E09000012",
+    "AllHouseholds": 95300,
+    "Working": 53100,
+    "Mixed": 29700,
+    "Workless": 12400
+  },
+  {
+    "LAD13NM": "Hammersmith and Fulham",
+    "Code": "E09000013",
+    "AllHouseholds": 62100,
+    "Working": 37900,
+    "Mixed": 15200,
+    "Workless": 9000
+  },
+  {
+    "LAD13NM": "Haringey",
+    "Code": "E09000014",
+    "AllHouseholds": 93600,
+    "Working": 54800,
+    "Mixed": 25300,
+    "Workless": 13500
+  },
+  {
+    "LAD13NM": "Islington",
+    "Code": "E09000019",
+    "AllHouseholds": 84900,
+    "Working": 54100,
+    "Mixed": 19300,
+    "Workless": 11500
+  },
+  {
+    "LAD13NM": "Kensington and Chelsea",
+    "Code": "E09000020",
+    "AllHouseholds": 55600,
+    "Working": 26700,
+    "Mixed": 17100,
+    "Workless": 11800
+  },
+  {
+    "LAD13NM": "Lambeth",
+    "Code": "E09000022",
+    "AllHouseholds": 117300,
+    "Working": 68800,
+    "Mixed": 34300,
+    "Workless": 14300
+  },
+  {
+    "LAD13NM": "Lewisham",
+    "Code": "E09000023",
+    "AllHouseholds": 111000,
+    "Working": 73500,
+    "Mixed": 26100,
+    "Workless": 11500
+  },
+  {
+    "LAD13NM": "Newham",
+    "Code": "E09000025",
+    "AllHouseholds": 114500,
+    "Working": 60000,
+    "Mixed": 41200,
+    "Workless": 13300
+  },
+  {
+    "LAD13NM": "Southwark",
+    "Code": "E09000028",
+    "AllHouseholds": 119800,
+    "Working": 71500,
+    "Mixed": 33300,
+    "Workless": 14900
+  },
+  {
+    "LAD13NM": "Tower Hamlets",
+    "Code": "E09000030",
+    "AllHouseholds": 113100,
+    "Working": 64300,
+    "Mixed": 32000,
+    "Workless": 16700
+  },
+  {
+    "LAD13NM": "Wandsworth",
+    "Code": "E09000032",
+    "AllHouseholds": 115700,
+    "Working": 71300,
+    "Mixed": 33400,
+    "Workless": 11000
+  },
+  {
+    "LAD13NM": "Westminster",
+    "Code": "E09000033",
+    "AllHouseholds": 94300,
+    "Working": 52700,
+    "Mixed": 26400,
+    "Workless": 15200
+  },
+  {
+    "LAD13NM": "Barking and Dagenham",
+    "Code": "E09000002",
+    "AllHouseholds": 66700,
+    "Working": 31800,
+    "Mixed": 25100,
+    "Workless": 9800
+  },
+  {
+    "LAD13NM": "Barnet",
+    "Code": "E09000003",
+    "AllHouseholds": 121600,
+    "Working": 64200,
+    "Mixed": 45900,
+    "Workless": 11500
+  },
+  {
+    "LAD13NM": "Bexley",
+    "Code": "E09000004",
+    "AllHouseholds": 75800,
+    "Working": 41800,
+    "Mixed": 23200,
+    "Workless": 10900
+  },
+  {
+    "LAD13NM": "Brent",
+    "Code": "E09000005",
+    "AllHouseholds": 99800,
+    "Working": 51300,
+    "Mixed": 38700,
+    "Workless": 9900
+  },
+  {
+    "LAD13NM": "Bromley",
+    "Code": "E09000006",
+    "AllHouseholds": 105500,
+    "Working": 65400,
+    "Mixed": 31500,
+    "Workless": 8700
+  },
+  {
+    "LAD13NM": "Croydon",
+    "Code": "E09000008",
+    "AllHouseholds": 127000,
+    "Working": 74100,
+    "Mixed": 43100,
+    "Workless": 9800
+  },
+  {
+    "LAD13NM": "Ealing",
+    "Code": "E09000009",
+    "AllHouseholds": 101800,
+    "Working": 47100,
+    "Mixed": 47300,
+    "Workless": 7400
+  },
+  {
+    "LAD13NM": "Enfield",
+    "Code": "E09000010",
+    "AllHouseholds": 100300,
+    "Working": 45000,
+    "Mixed": 38200,
+    "Workless": 17100
+  },
+  {
+    "LAD13NM": "Greenwich",
+    "Code": "E09000011",
+    "AllHouseholds": 90200,
+    "Working": 51000,
+    "Mixed": 31900,
+    "Workless": 7300
+  },
+  {
+    "LAD13NM": "Harrow",
+    "Code": "E09000015",
+    "AllHouseholds": 66000,
+    "Working": 32100,
+    "Mixed": 26300,
+    "Workless": 7600
+  },
+  {
+    "LAD13NM": "Havering",
+    "Code": "E09000016",
+    "AllHouseholds": 77300,
+    "Working": 45100,
+    "Mixed": 23200,
+    "Workless": 9000
+  },
+  {
+    "LAD13NM": "Hillingdon",
+    "Code": "E09000017",
+    "AllHouseholds": 94700,
+    "Working": 48900,
+    "Mixed": 32900,
+    "Workless": 12900
+  },
+  {
+    "LAD13NM": "Hounslow",
+    "Code": "E09000018",
+    "AllHouseholds": 91800,
+    "Working": 42600,
+    "Mixed": 36500,
+    "Workless": 12600
+  },
+  {
+    "LAD13NM": "Kingston upon Thames",
+    "Code": "E09000021",
+    "AllHouseholds": 54000,
+    "Working": 34000,
+    "Mixed": 13700,
+    "Workless": 6300
+  },
+  {
+    "LAD13NM": "Merton",
+    "Code": "E09000024",
+    "AllHouseholds": 65000,
+    "Working": 40100,
+    "Mixed": 20000,
+    "Workless": 4900
+  },
+  {
+    "LAD13NM": "Redbridge",
+    "Code": "E09000026",
+    "AllHouseholds": 88200,
+    "Working": 41800,
+    "Mixed": 38400,
+    "Workless": 8000
+  },
+  {
+    "LAD13NM": "Richmond upon Thames",
+    "Code": "E09000027",
+    "AllHouseholds": 59900,
+    "Working": 38500,
+    "Mixed": 17600,
+    "Workless": 3700
+  },
+  {
+    "LAD13NM": "Sutton",
+    "Code": "E09000029",
+    "AllHouseholds": 65700,
+    "Working": 38000,
+    "Mixed": 20100,
+    "Workless": 7600
+  },
+  {
+    "LAD13NM": "Waltham Forest",
+    "Code": "E09000031",
+    "AllHouseholds": 97100,
+    "Working": 55900,
+    "Mixed": 27500,
+    "Workless": 13700
+  },
+  {
+    "LAD13NM": "Bracknell Forest",
+    "Code": "E06000036",
+    "AllHouseholds": 38600,
+    "Working": 25800,
+    "Mixed": 10000,
+    "Workless": 2800
+  },
+  {
+    "LAD13NM": "Brighton and Hove",
+    "Code": "E06000043",
+    "AllHouseholds": 98800,
+    "Working": 57200,
+    "Mixed": 28700,
+    "Workless": 12900
+  },
+  {
+    "LAD13NM": "Isle of Wight",
+    "Code": "E06000046",
+    "AllHouseholds": 39400,
+    "Working": 20700,
+    "Mixed": 11100,
+    "Workless": 7600
+  },
+  {
+    "LAD13NM": "Medway",
+    "Code": "E06000035",
+    "AllHouseholds": 82800,
+    "Working": 46000,
+    "Mixed": 26300,
+    "Workless": 10500
+  },
+  {
+    "LAD13NM": "Milton Keynes",
+    "Code": "E06000042",
+    "AllHouseholds": 85700,
+    "Working": 51800,
+    "Mixed": 24700,
+    "Workless": 9100
+  },
+  {
+    "LAD13NM": "Portsmouth",
+    "Code": "E06000044",
+    "AllHouseholds": 66300,
+    "Working": 36200,
+    "Mixed": 18000,
+    "Workless": 12100
+  },
+  {
+    "LAD13NM": "Reading",
+    "Code": "E06000038",
+    "AllHouseholds": 53300,
+    "Working": 33900,
+    "Mixed": 14300,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "Slough",
+    "Code": "E06000039",
+    "AllHouseholds": 45100,
+    "Working": 24600,
+    "Mixed": 15700,
+    "Workless": 4800
+  },
+  {
+    "LAD13NM": "Southampton",
+    "Code": "E06000045",
+    "AllHouseholds": 83000,
+    "Working": 51000,
+    "Mixed": 20200,
+    "Workless": 11700
+  },
+  {
+    "LAD13NM": "West Berkshire",
+    "Code": "E06000037",
+    "AllHouseholds": 47700,
+    "Working": 31300,
+    "Mixed": 13800,
+    "Workless": 2700
+  },
+  {
+    "LAD13NM": "Windsor and Maidenhead",
+    "Code": "E06000040",
+    "AllHouseholds": 46000,
+    "Working": 29000,
+    "Mixed": 13200,
+    "Workless": 3800
+  },
+  {
+    "LAD13NM": "Wokingham",
+    "Code": "E06000041",
+    "AllHouseholds": 47500,
+    "Working": 30000,
+    "Mixed": 13900,
+    "Workless": 3700
+  },
+  {
+    "LAD13NM": "Buckinghamshire",
+    "Code": "E06000060",
+    "AllHouseholds": 163000,
+    "Working": 103000,
+    "Mixed": 47100,
+    "Workless": 12800
+  },
+  {
+    "LAD13NM": "Eastbourne",
+    "Code": "E07000061",
+    "AllHouseholds": 29600,
+    "Working": 18100,
+    "Mixed": 5500,
+    "Workless": 6000
+  },
+  {
+    "LAD13NM": "Hastings",
+    "Code": "E07000062",
+    "AllHouseholds": 26900,
+    "Working": 15600,
+    "Mixed": 8700,
+    "Workless": 2600
+  },
+  {
+    "LAD13NM": "Lewes",
+    "Code": "E07000063",
+    "AllHouseholds": 30700,
+    "Working": 17600,
+    "Mixed": 9500,
+    "Workless": 3600
+  },
+  {
+    "LAD13NM": "Rother",
+    "Code": "E07000064",
+    "AllHouseholds": 26100,
+    "Working": 13900,
+    "Mixed": 9000,
+    "Workless": 3200
+  },
+  {
+    "LAD13NM": "Wealden",
+    "Code": "E07000065",
+    "AllHouseholds": 46400,
+    "Working": 27500,
+    "Mixed": 14000,
+    "Workless": 4900
+  },
+  {
+    "LAD13NM": "Basingstoke and Deane",
+    "Code": "E07000084",
+    "AllHouseholds": 59600,
+    "Working": 39300,
+    "Mixed": 16600,
+    "Workless": 3700
+  },
+  {
+    "LAD13NM": "East Hampshire",
+    "Code": "E07000085",
+    "AllHouseholds": 36600,
+    "Working": 25800,
+    "Mixed": 7700,
+    "Workless": 3100
+  },
+  {
+    "LAD13NM": "Eastleigh",
+    "Code": "E07000086",
+    "AllHouseholds": 42000,
+    "Working": 24800,
+    "Mixed": 11400,
+    "Workless": 5700
+  },
+  {
+    "LAD13NM": "Fareham",
+    "Code": "E07000087",
+    "AllHouseholds": 36100,
+    "Working": 23600,
+    "Mixed": 9000,
+    "Workless": 3500
+  },
+  {
+    "LAD13NM": "Gosport",
+    "Code": "E07000088",
+    "AllHouseholds": 29500,
+    "Working": 17000,
+    "Mixed": 6600,
+    "Workless": 5900
+  },
+  {
+    "LAD13NM": "Hart",
+    "Code": "E07000089",
+    "AllHouseholds": 26500,
+    "Working": 19200,
+    "Mixed": 5800,
+    "Workless": 1500
+  },
+  {
+    "LAD13NM": "Havant",
+    "Code": "E07000090",
+    "AllHouseholds": 32200,
+    "Working": 16800,
+    "Mixed": 10600,
+    "Workless": 4800
+  },
+  {
+    "LAD13NM": "New Forest",
+    "Code": "E07000091",
+    "AllHouseholds": 53800,
+    "Working": 36600,
+    "Mixed": 13200,
+    "Workless": 4000
+  },
+  {
+    "LAD13NM": "Rushmoor",
+    "Code": "E07000092",
+    "AllHouseholds": 31300,
+    "Working": 21800,
+    "Mixed": 6500,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Test Valley",
+    "Code": "E07000093",
+    "AllHouseholds": 39600,
+    "Working": 26000,
+    "Mixed": 8500,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "Winchester",
+    "Code": "E07000094",
+    "AllHouseholds": 36300,
+    "Working": 20500,
+    "Mixed": 11600,
+    "Workless": 4200
+  },
+  {
+    "LAD13NM": "Ashford",
+    "Code": "E07000105",
+    "AllHouseholds": 43100,
+    "Working": 26500,
+    "Mixed": 9700,
+    "Workless": 7000
+  },
+  {
+    "LAD13NM": "Canterbury",
+    "Code": "E07000106",
+    "AllHouseholds": 46500,
+    "Working": 23200,
+    "Mixed": 17500,
+    "Workless": 5900
+  },
+  {
+    "LAD13NM": "Dartford",
+    "Code": "E07000107",
+    "AllHouseholds": 35300,
+    "Working": 27000,
+    "Mixed": 7100,
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "Dover",
+    "Code": "E07000108",
+    "AllHouseholds": 36200,
+    "Working": 20000,
+    "Mixed": 13200,
+    "Workless": 3100
+  },
+  {
+    "LAD13NM": "Gravesham",
+    "Code": "E07000109",
+    "AllHouseholds": 34800,
+    "Working": 22200,
+    "Mixed": 8900,
+    "Workless": 3700
+  },
+  {
+    "LAD13NM": "Maidstone",
+    "Code": "E07000110",
+    "AllHouseholds": 49500,
+    "Working": 30700,
+    "Mixed": 13100,
+    "Workless": 5600
+  },
+  {
+    "LAD13NM": "Sevenoaks",
+    "Code": "E07000111",
+    "AllHouseholds": 35500,
+    "Working": 19700,
+    "Mixed": 13700,
+    "Workless": 2100
+  },
+  {
+    "LAD13NM": "Folkestone and Hythe",
+    "Code": "E07000112",
+    "AllHouseholds": 36600,
+    "Working": 24200,
+    "Mixed": 6000,
+    "Workless": 6400
+  },
+  {
+    "LAD13NM": "Swale",
+    "Code": "E07000113",
+    "AllHouseholds": 42400,
+    "Working": 23800,
+    "Mixed": 13700,
+    "Workless": 4800
+  },
+  {
+    "LAD13NM": "Thanet",
+    "Code": "E07000114",
+    "AllHouseholds": 39700,
+    "Working": 19000,
+    "Mixed": 14300,
+    "Workless": 6400
+  },
+  {
+    "LAD13NM": "Tonbridge and Malling",
+    "Code": "E07000115",
+    "AllHouseholds": 40400,
+    "Working": 27100,
+    "Mixed": 11000,
+    "Workless": 2300
+  },
+  {
+    "LAD13NM": "Tunbridge Wells",
+    "Code": "E07000116",
+    "AllHouseholds": 37800,
+    "Working": 25300,
+    "Mixed": 9100,
+    "Workless": 3400
+  },
+  {
+    "LAD13NM": "Cherwell",
+    "Code": "E07000177",
+    "AllHouseholds": 48400,
+    "Working": 33200,
+    "Mixed": 13200,
+    "Workless": 2000
+  },
+  {
+    "LAD13NM": "Oxford",
+    "Code": "E07000178",
+    "AllHouseholds": 51100,
+    "Working": 37500,
+    "Mixed": 8900,
+    "Workless": 4700
+  },
+  {
+    "LAD13NM": "South Oxfordshire",
+    "Code": "E07000179",
+    "AllHouseholds": 40400,
+    "Working": 28000,
+    "Mixed": 9700,
+    "Workless": 2700
+  },
+  {
+    "LAD13NM": "Vale of White Horse",
+    "Code": "E07000180",
+    "AllHouseholds": 35600,
+    "Working": 23400,
+    "Mixed": 9500,
+    "Workless": 2700
+  },
+  {
+    "LAD13NM": "West Oxfordshire",
+    "Code": "E07000181",
+    "AllHouseholds": 35500,
+    "Working": 26400,
+    "Mixed": 6200,
+    "Workless": 2900
+  },
+  {
+    "LAD13NM": "Elmbridge",
+    "Code": "E07000207",
+    "AllHouseholds": 39200,
+    "Working": 20600,
+    "Mixed": 15600,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Epsom and Ewell",
+    "Code": "E07000208",
+    "AllHouseholds": 23500,
+    "Working": 14100,
+    "Mixed": 8300,
+    "Workless": 1200
+  },
+  {
+    "LAD13NM": "Guildford",
+    "Code": "E07000209",
+    "AllHouseholds": 49700,
+    "Working": 34600,
+    "Mixed": 11000,
+    "Workless": 4100
+  },
+  {
+    "LAD13NM": "Mole Valley",
+    "Code": "E07000210",
+    "AllHouseholds": 26800,
+    "Working": 18800,
+    "Mixed": 6000,
+    "Workless": 1900
+  },
+  {
+    "LAD13NM": "Reigate and Banstead",
+    "Code": "E07000211",
+    "AllHouseholds": 44600,
+    "Working": 27500,
+    "Mixed": 15200,
+    "Workless": 1900
+  },
+  {
+    "LAD13NM": "Runnymede",
+    "Code": "E07000212",
+    "AllHouseholds": 29300,
+    "Working": 20100,
+    "Mixed": 6700,
+    "Workless": 2500
+  },
+  {
+    "LAD13NM": "Spelthorne",
+    "Code": "E07000213",
+    "AllHouseholds": 31400,
+    "Working": 20000,
+    "Mixed": 8300,
+    "Workless": 3200
+  },
+  {
+    "LAD13NM": "Surrey Heath",
+    "Code": "E07000214",
+    "AllHouseholds": 27600,
+    "Working": 16400,
+    "Mixed": 8800,
+    "Workless": 2400
+  },
+  {
+    "LAD13NM": "Tandridge",
+    "Code": "E07000215",
+    "AllHouseholds": 28100,
+    "Working": 17500,
+    "Mixed": 7300,
+    "Workless": 3400
+  },
+  {
+    "LAD13NM": "Waverley",
+    "Code": "E07000216",
+    "AllHouseholds": 34000,
+    "Working": 22400,
+    "Mixed": 9600,
+    "Workless": 2000
+  },
+  {
+    "LAD13NM": "Woking",
+    "Code": "E07000217",
+    "AllHouseholds": 32300,
+    "Working": 23200,
+    "Mixed": 6600,
+    "Workless": 2500
+  },
+  {
+    "LAD13NM": "Adur",
+    "Code": "E07000223",
+    "AllHouseholds": 19000,
+    "Working": 15300,
+    "Mixed": 2200,
+    "Workless": 1600
+  },
+  {
+    "LAD13NM": "Arun",
+    "Code": "E07000224",
+    "AllHouseholds": 48300,
+    "Working": 27500,
+    "Mixed": 12500,
+    "Workless": 8300
+  },
+  {
+    "LAD13NM": "Chichester",
+    "Code": "E07000225",
+    "AllHouseholds": 33400,
+    "Working": 21700,
+    "Mixed": 9600,
+    "Workless": 2100
+  },
+  {
+    "LAD13NM": "Crawley",
+    "Code": "E07000226",
+    "AllHouseholds": 36600,
+    "Working": 21700,
+    "Mixed": 11900,
+    "Workless": 3100
+  },
+  {
+    "LAD13NM": "Horsham",
+    "Code": "E07000227",
+    "AllHouseholds": 44400,
+    "Working": 29100,
+    "Mixed": 11700,
+    "Workless": 3500
+  },
+  {
+    "LAD13NM": "Mid Sussex",
+    "Code": "E07000228",
+    "AllHouseholds": 45900,
+    "Working": 30100,
+    "Mixed": 11700,
+    "Workless": 4100
+  },
+  {
+    "LAD13NM": "Worthing",
+    "Code": "E07000229",
+    "AllHouseholds": 35600,
+    "Working": 23900,
+    "Mixed": 8200,
+    "Workless": 3500
+  },
+  {
+    "LAD13NM": "Bath and North East Somerset",
+    "Code": "E06000022",
+    "AllHouseholds": 57400,
+    "Working": 35800,
+    "Mixed": 14200,
+    "Workless": 7400
+  },
+  {
+    "LAD13NM": "Bristol, City of",
+    "Code": "E06000023",
+    "AllHouseholds": 156800,
+    "Working": 94300,
+    "Mixed": 44800,
+    "Workless": 17700
+  },
+  {
+    "LAD13NM": "Cornwall",
+    "Code": "E06000052",
+    "AllHouseholds": 177800,
+    "Working": 104400,
+    "Mixed": 46300,
+    "Workless": 27100
+  },
+  {
+    "LAD13NM": "Isles of Scilly",
+    "Code": "E06000053",
+    "AllHouseholds": "!",
+    "Working": "!",
+    "Mixed": "!",
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "North Somerset",
+    "Code": "E06000024",
+    "AllHouseholds": 65300,
+    "Working": 41300,
+    "Mixed": 17600,
+    "Workless": 6400
+  },
+  {
+    "LAD13NM": "Plymouth",
+    "Code": "E06000026",
+    "AllHouseholds": 87000,
+    "Working": 48100,
+    "Mixed": 24800,
+    "Workless": 14100
+  },
+  {
+    "LAD13NM": "South Gloucestershire",
+    "Code": "E06000025",
+    "AllHouseholds": 83600,
+    "Working": 53700,
+    "Mixed": 22900,
+    "Workless": 7100
+  },
+  {
+    "LAD13NM": "Swindon",
+    "Code": "E06000030",
+    "AllHouseholds": 71100,
+    "Working": 44300,
+    "Mixed": 19200,
+    "Workless": 7700
+  },
+  {
+    "LAD13NM": "Torbay",
+    "Code": "E06000027",
+    "AllHouseholds": 37900,
+    "Working": 21000,
+    "Mixed": 10700,
+    "Workless": 6200
+  },
+  {
+    "LAD13NM": "Wiltshire",
+    "Code": "E06000054",
+    "AllHouseholds": 155800,
+    "Working": 95000,
+    "Mixed": 43200,
+    "Workless": 17600
+  },
+  {
+    "LAD13NM": "East Devon",
+    "Code": "E07000040",
+    "AllHouseholds": 39800,
+    "Working": 26800,
+    "Mixed": 10000,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Exeter",
+    "Code": "E07000041",
+    "AllHouseholds": 44200,
+    "Working": 31300,
+    "Mixed": 9700,
+    "Workless": 3300
+  },
+  {
+    "LAD13NM": "Mid Devon",
+    "Code": "E07000042",
+    "AllHouseholds": 27200,
+    "Working": 19900,
+    "Mixed": 4800,
+    "Workless": 2500
+  },
+  {
+    "LAD13NM": "North Devon",
+    "Code": "E07000043",
+    "AllHouseholds": 29000,
+    "Working": 20400,
+    "Mixed": 4900,
+    "Workless": 3700
+  },
+  {
+    "LAD13NM": "South Hams",
+    "Code": "E07000044",
+    "AllHouseholds": 26000,
+    "Working": 17600,
+    "Mixed": 4500,
+    "Workless": 4000
+  },
+  {
+    "LAD13NM": "Teignbridge",
+    "Code": "E07000045",
+    "AllHouseholds": 39000,
+    "Working": 25200,
+    "Mixed": 10800,
+    "Workless": 3000
+  },
+  {
+    "LAD13NM": "Torridge",
+    "Code": "E07000046",
+    "AllHouseholds": 19900,
+    "Working": 14900,
+    "Mixed": 3800,
+    "Workless": 1200
+  },
+  {
+    "LAD13NM": "West Devon",
+    "Code": "E07000047",
+    "AllHouseholds": 14200,
+    "Working": 8900,
+    "Mixed": 3900,
+    "Workless": 1400
+  },
+  {
+    "LAD13NM": "Bournemouth, Christchurch and Poole",
+    "Code": "E06000058",
+    "AllHouseholds": 119300,
+    "Working": 77200,
+    "Mixed": 29300,
+    "Workless": 12800
+  },
+  {
+    "LAD13NM": "Dorset",
+    "Code": "E06000059",
+    "AllHouseholds": 105100,
+    "Working": 59100,
+    "Mixed": 28900,
+    "Workless": 17100
+  },
+  {
+    "LAD13NM": "Cheltenham",
+    "Code": "E07000078",
+    "AllHouseholds": 39600,
+    "Working": 26600,
+    "Mixed": 9200,
+    "Workless": 3800
+  },
+  {
+    "LAD13NM": "Cotswold",
+    "Code": "E07000079",
+    "AllHouseholds": 27000,
+    "Working": 17800,
+    "Mixed": 8000,
+    "Workless": 1300
+  },
+  {
+    "LAD13NM": "Forest of Dean",
+    "Code": "E07000080",
+    "AllHouseholds": 26700,
+    "Working": 15800,
+    "Mixed": 7800,
+    "Workless": 3100
+  },
+  {
+    "LAD13NM": "Gloucester",
+    "Code": "E07000081",
+    "AllHouseholds": 43700,
+    "Working": 30000,
+    "Mixed": 10800,
+    "Workless": 2900
+  },
+  {
+    "LAD13NM": "Stroud",
+    "Code": "E07000082",
+    "AllHouseholds": 36000,
+    "Working": 21700,
+    "Mixed": 10100,
+    "Workless": 4200
+  },
+  {
+    "LAD13NM": "Tewkesbury",
+    "Code": "E07000083",
+    "AllHouseholds": 28800,
+    "Working": 18500,
+    "Mixed": 7900,
+    "Workless": 2400
+  },
+  {
+    "LAD13NM": "Mendip",
+    "Code": "E07000187",
+    "AllHouseholds": 34700,
+    "Working": 23800,
+    "Mixed": 8100,
+    "Workless": 2900
+  },
+  {
+    "LAD13NM": "Sedgemoor",
+    "Code": "E07000188",
+    "AllHouseholds": 41300,
+    "Working": 27000,
+    "Mixed": 9200,
+    "Workless": 5100
+  },
+  {
+    "LAD13NM": "South Somerset",
+    "Code": "E07000189",
+    "AllHouseholds": 48200,
+    "Working": 31000,
+    "Mixed": 9900,
+    "Workless": 7300
+  },
+  {
+    "LAD13NM": "Somerset West and Taunton",
+    "Code": "E07000246",
+    "AllHouseholds": 45100,
+    "Working": 28500,
+    "Mixed": 9700,
+    "Workless": 6900
+  },
+  {
+    "LAD13NM": "Isle of Anglesey",
+    "Code": "W06000001",
+    "AllHouseholds": 20400,
+    "Working": 11100,
+    "Mixed": 5700,
+    "Workless": 3700
+  },
+  {
+    "LAD13NM": "Gwynedd",
+    "Code": "W06000002",
+    "AllHouseholds": 37900,
+    "Working": 21100,
+    "Mixed": 10100,
+    "Workless": 6600
+  },
+  {
+    "LAD13NM": "Conwy",
+    "Code": "W06000003",
+    "AllHouseholds": 31900,
+    "Working": 16900,
+    "Mixed": 9200,
+    "Workless": 5700
+  },
+  {
+    "LAD13NM": "Denbighshire",
+    "Code": "W06000004",
+    "AllHouseholds": 26900,
+    "Working": 14800,
+    "Mixed": 6900,
+    "Workless": 5200
+  },
+  {
+    "LAD13NM": "Flintshire",
+    "Code": "W06000005",
+    "AllHouseholds": 46000,
+    "Working": 28300,
+    "Mixed": 11300,
+    "Workless": 6300
+  },
+  {
+    "LAD13NM": "Wrexham",
+    "Code": "W06000006",
+    "AllHouseholds": 42300,
+    "Working": 24000,
+    "Mixed": 11400,
+    "Workless": 6900
+  },
+  {
+    "LAD13NM": "Powys",
+    "Code": "W06000023",
+    "AllHouseholds": 38600,
+    "Working": 21900,
+    "Mixed": 11100,
+    "Workless": 5700
+  },
+  {
+    "LAD13NM": "Ceredigion",
+    "Code": "W06000008",
+    "AllHouseholds": 22400,
+    "Working": 11600,
+    "Mixed": 6700,
+    "Workless": 4000
+  },
+  {
+    "LAD13NM": "Pembrokeshire",
+    "Code": "W06000009",
+    "AllHouseholds": 35900,
+    "Working": 19700,
+    "Mixed": 8500,
+    "Workless": 7700
+  },
+  {
+    "LAD13NM": "Carmarthenshire",
+    "Code": "W06000010",
+    "AllHouseholds": 58200,
+    "Working": 31100,
+    "Mixed": 15900,
+    "Workless": 11300
+  },
+  {
+    "LAD13NM": "Swansea",
+    "Code": "W06000011",
+    "AllHouseholds": 76100,
+    "Working": 38700,
+    "Mixed": 20000,
+    "Workless": 17400
+  },
+  {
+    "LAD13NM": "Neath Port Talbot",
+    "Code": "W06000012",
+    "AllHouseholds": 43600,
+    "Working": 24000,
+    "Mixed": 10600,
+    "Workless": 9100
+  },
+  {
+    "LAD13NM": "Bridgend",
+    "Code": "W06000013",
+    "AllHouseholds": 43600,
+    "Working": 23600,
+    "Mixed": 12500,
+    "Workless": 7600
+  },
+  {
+    "LAD13NM": "Vale of Glamorgan",
+    "Code": "W06000014",
+    "AllHouseholds": 38400,
+    "Working": 20300,
+    "Mixed": 12300,
+    "Workless": 5800
+  },
+  {
+    "LAD13NM": "Cardiff",
+    "Code": "W06000015",
+    "AllHouseholds": 125600,
+    "Working": 80000,
+    "Mixed": 27500,
+    "Workless": 18000
+  },
+  {
+    "LAD13NM": "Rhondda Cynon Taff",
+    "Code": "W06000016",
+    "AllHouseholds": 79400,
+    "Working": 41600,
+    "Mixed": 18000,
+    "Workless": 19800
+  },
+  {
+    "LAD13NM": "Merthyr Tydfil",
+    "Code": "W06000024",
+    "AllHouseholds": 18600,
+    "Working": 10100,
+    "Mixed": 4700,
+    "Workless": 3800
+  },
+  {
+    "LAD13NM": "Caerphilly",
+    "Code": "W06000018",
+    "AllHouseholds": 57300,
+    "Working": 29500,
+    "Mixed": 16400,
+    "Workless": 11400
+  },
+  {
+    "LAD13NM": "Blaenau Gwent",
+    "Code": "W06000019",
+    "AllHouseholds": 22300,
+    "Working": 11600,
+    "Mixed": 5900,
+    "Workless": 4800
+  },
+  {
+    "LAD13NM": "Torfaen",
+    "Code": "W06000020",
+    "AllHouseholds": 28300,
+    "Working": 14100,
+    "Mixed": 8600,
+    "Workless": 5500
+  },
+  {
+    "LAD13NM": "Monmouthshire",
+    "Code": "W06000021",
+    "AllHouseholds": 26800,
+    "Working": 16700,
+    "Mixed": 6600,
+    "Workless": 3500
+  },
+  {
+    "LAD13NM": "Newport",
+    "Code": "W06000022",
+    "AllHouseholds": 47600,
+    "Working": 27100,
+    "Mixed": 12200,
+    "Workless": 8300
+  },
+  {
+    "LAD13NM": "Aberdeen City",
+    "Code": "S12000033",
+    "AllHouseholds": 86000,
+    "Working": 54200,
+    "Mixed": 18000,
+    "Workless": 13900
+  },
+  {
+    "LAD13NM": "Aberdeenshire",
+    "Code": "S12000034",
+    "AllHouseholds": 81200,
+    "Working": 50700,
+    "Mixed": 20800,
+    "Workless": 9700
+  },
+  {
+    "LAD13NM": "Angus",
+    "Code": "S12000041",
+    "AllHouseholds": 36900,
+    "Working": 21800,
+    "Mixed": 9400,
+    "Workless": 5700
+  },
+  {
+    "LAD13NM": "Argyll and Bute",
+    "Code": "S12000035",
+    "AllHouseholds": 22800,
+    "Working": 11700,
+    "Mixed": 6700,
+    "Workless": 4400
+  },
+  {
+    "LAD13NM": "Clackmannanshire",
+    "Code": "S12000005",
+    "AllHouseholds": 16100,
+    "Working": 9000,
+    "Mixed": 3800,
+    "Workless": 3300
+  },
+  {
+    "LAD13NM": "Dumfries and Galloway",
+    "Code": "S12000006",
+    "AllHouseholds": 44100,
+    "Working": 24900,
+    "Mixed": 11200,
+    "Workless": 8000
+  },
+  {
+    "LAD13NM": "Dundee City",
+    "Code": "S12000042",
+    "AllHouseholds": 53400,
+    "Working": 29100,
+    "Mixed": 10800,
+    "Workless": 13500
+  },
+  {
+    "LAD13NM": "East Ayrshire",
+    "Code": "S12000008",
+    "AllHouseholds": 40000,
+    "Working": 23200,
+    "Mixed": 7600,
+    "Workless": 9200
+  },
+  {
+    "LAD13NM": "East Dunbartonshire",
+    "Code": "S12000045",
+    "AllHouseholds": 30300,
+    "Working": 16700,
+    "Mixed": 9400,
+    "Workless": 4200
+  },
+  {
+    "LAD13NM": "East Lothian",
+    "Code": "S12000010",
+    "AllHouseholds": 33400,
+    "Working": 20900,
+    "Mixed": 8600,
+    "Workless": 3900
+  },
+  {
+    "LAD13NM": "East Renfrewshire",
+    "Code": "S12000011",
+    "AllHouseholds": 27000,
+    "Working": 13900,
+    "Mixed": 9200,
+    "Workless": 3800
+  },
+  {
+    "LAD13NM": "City of Edinburgh",
+    "Code": "S12000036",
+    "AllHouseholds": 190500,
+    "Working": 120700,
+    "Mixed": 41100,
+    "Workless": 28700
+  },
+  {
+    "LAD13NM": "Na h-Eileanan Siar",
+    "Code": "S12000013",
+    "AllHouseholds": 7100,
+    "Working": 3700,
+    "Mixed": 2400,
+    "Workless": 1000
+  },
+  {
+    "LAD13NM": "Falkirk",
+    "Code": "S12000014",
+    "AllHouseholds": 55000,
+    "Working": 32600,
+    "Mixed": 11200,
+    "Workless": 11200
+  },
+  {
+    "LAD13NM": "Fife",
+    "Code": "S12000047",
+    "AllHouseholds": 125600,
+    "Working": 73700,
+    "Mixed": 30300,
+    "Workless": 21700
+  },
+  {
+    "LAD13NM": "Glasgow City",
+    "Code": "S12000049",
+    "AllHouseholds": 244300,
+    "Working": 128700,
+    "Mixed": 56800,
+    "Workless": 58900
+  },
+  {
+    "LAD13NM": "Highland",
+    "Code": "S12000017",
+    "AllHouseholds": 58800,
+    "Working": 31000,
+    "Mixed": 19600,
+    "Workless": 8200
+  },
+  {
+    "LAD13NM": "Inverclyde",
+    "Code": "S12000018",
+    "AllHouseholds": 24300,
+    "Working": 12900,
+    "Mixed": 5500,
+    "Workless": 5800
+  },
+  {
+    "LAD13NM": "Midlothian",
+    "Code": "S12000019",
+    "AllHouseholds": 29600,
+    "Working": 18800,
+    "Mixed": 7100,
+    "Workless": 3700
+  },
+  {
+    "LAD13NM": "Moray",
+    "Code": "S12000020",
+    "AllHouseholds": 28500,
+    "Working": 17000,
+    "Mixed": 7700,
+    "Workless": 3900
+  },
+  {
+    "LAD13NM": "North Ayrshire",
+    "Code": "S12000021",
+    "AllHouseholds": 41200,
+    "Working": 21800,
+    "Mixed": 11100,
+    "Workless": 8300
+  },
+  {
+    "LAD13NM": "North Lanarkshire",
+    "Code": "S12000050",
+    "AllHouseholds": 113900,
+    "Working": 67800,
+    "Mixed": 26800,
+    "Workless": 19400
+  },
+  {
+    "LAD13NM": "Orkney Islands",
+    "Code": "S12000023",
+    "AllHouseholds": 6100,
+    "Working": 4100,
+    "Mixed": 1500,
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "Perth and Kinross",
+    "Code": "S12000048",
+    "AllHouseholds": 46000,
+    "Working": 30700,
+    "Mixed": 9800,
+    "Workless": 5500
+  },
+  {
+    "LAD13NM": "Renfrewshire",
+    "Code": "S12000038",
+    "AllHouseholds": 58900,
+    "Working": 34400,
+    "Mixed": 13700,
+    "Workless": 10700
+  },
+  {
+    "LAD13NM": "Scottish Borders",
+    "Code": "S12000026",
+    "AllHouseholds": 34800,
+    "Working": 20300,
+    "Mixed": 8800,
+    "Workless": 5700
+  },
+  {
+    "LAD13NM": "Shetland Islands",
+    "Code": "S12000027",
+    "AllHouseholds": 6100,
+    "Working": 3400,
+    "Mixed": 2300,
+    "Workless": "!"
+  },
+  {
+    "LAD13NM": "South Ayrshire",
+    "Code": "S12000028",
+    "AllHouseholds": 34500,
+    "Working": 18400,
+    "Mixed": 9400,
+    "Workless": 6700
+  },
+  {
+    "LAD13NM": "South Lanarkshire",
+    "Code": "S12000029",
+    "AllHouseholds": 107800,
+    "Working": 66600,
+    "Mixed": 24500,
+    "Workless": 16700
+  },
+  {
+    "LAD13NM": "Stirling",
+    "Code": "S12000030",
+    "AllHouseholds": 30100,
+    "Working": 18200,
+    "Mixed": 5800,
+    "Workless": 6100
+  },
+  {
+    "LAD13NM": "West Dunbartonshire",
+    "Code": "S12000039",
+    "AllHouseholds": 31700,
+    "Working": 18500,
+    "Mixed": 5900,
+    "Workless": 7300
+  },
+  {
+    "LAD13NM": "West Lothian",
+    "Code": "S12000040",
+    "AllHouseholds": 60000,
+    "Working": 36700,
+    "Mixed": 14100,
+    "Workless": 9200
+  },
+  {
+    "LAD13NM": "Column Total",
+    "Code": "Column Total",
+    "AllHouseholds": 20515400,
+    "Working": 12087100,
+    "Mixed": 5574300,
+    "Workless": 2854000
+  }
+]

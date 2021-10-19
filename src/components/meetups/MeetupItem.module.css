@@ -1,0 +1,55 @@
+.item {
+  margin: 0;
+  display: grid;
+  border: 1px solid #adabab;
+  border-style: dotted;
+}
+.container {
+  display: inline-block;
+  text-align: left;
+  align-items: space-between;
+}
+.content {
+  text-align: left;
+  padding: 0.25rem;
+  padding-left: 0.75rem;
+  display: inline-block;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  color: #2c292b;
+}
+
+.actions {
+  padding: 0.5rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.actions button {
+  font: inherit;
+  cursor: pointer;
+  color: #77002e;
+  border: 1px solid #77002e;
+  background-color: transparent;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7em;
+}
+
+.actions button:hover,
+.actions button:active {
+  background-color: #ffe2ed;
+}
+
+.title {
+  font-size: 20px;
+  color: red;
+  display: inline-block;
+}
+
+.break {
+  height: 1px;
+  margin-top: 0;
+}

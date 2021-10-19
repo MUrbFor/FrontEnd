@@ -1,0 +1,908 @@
+[
+ {
+   "ONSCode": "E06000047",
+   "LocalAuthority": "County Durham",
+   "FIELD3": "",
+   "TotalBBIssued": 28748
+ },
+ {
+   "ONSCode": "E06000005",
+   "LocalAuthority": "Darlington",
+   "FIELD3": "",
+   "TotalBBIssued": 5918
+ },
+ {
+   "ONSCode": "E06000001",
+   "LocalAuthority": "Hartlepool",
+   "FIELD3": "",
+   "TotalBBIssued": 5058
+ },
+ {
+   "ONSCode": "E06000002",
+   "LocalAuthority": "Middlesbrough",
+   "FIELD3": "",
+   "TotalBBIssued": 6162
+ },
+ {
+   "ONSCode": "E06000057",
+   "LocalAuthority": "Northumberland",
+   "FIELD3": "",
+   "TotalBBIssued": 17136
+ },
+ {
+   "ONSCode": "E06000003",
+   "LocalAuthority": "Redcar and Cleveland",
+   "FIELD3": "",
+   "TotalBBIssued": 7841
+ },
+ {
+   "ONSCode": "E06000004",
+   "LocalAuthority": "Stockton-on-Tees",
+   "FIELD3": "",
+   "TotalBBIssued": 13166
+ },
+ {
+   "ONSCode": "E08000037",
+   "LocalAuthority": "Gateshead",
+   "FIELD3": "",
+   "TotalBBIssued": 9266
+ },
+ {
+   "ONSCode": "E08000021",
+   "LocalAuthority": "Newcastle upon Tyne",
+   "FIELD3": "",
+   "TotalBBIssued": 9548
+ },
+ {
+   "ONSCode": "E08000022",
+   "LocalAuthority": "North Tyneside",
+   "FIELD3": "",
+   "TotalBBIssued": 8732
+ },
+ {
+   "ONSCode": "E08000023",
+   "LocalAuthority": "South Tyneside",
+   "FIELD3": "",
+   "TotalBBIssued": 7562
+ },
+ {
+   "ONSCode": "E08000024",
+   "LocalAuthority": "Sunderland",
+   "FIELD3": "",
+   "TotalBBIssued": 18942
+ },
+ {
+   "ONSCode": "E06000008",
+   "LocalAuthority": "Blackburn with Darwen",
+   "FIELD3": "",
+   "TotalBBIssued": 7045
+ },
+ {
+   "ONSCode": "E06000009",
+   "LocalAuthority": "Blackpool",
+   "FIELD3": "",
+   "TotalBBIssued": 8050
+ },
+ {
+   "ONSCode": "E06000049",
+   "LocalAuthority": "Cheshire East",
+   "FIELD3": "",
+   "TotalBBIssued": 21443
+ },
+ {
+   "ONSCode": "E06000050",
+   "LocalAuthority": "Cheshire West and Chester",
+   "FIELD3": "",
+   "TotalBBIssued": 18528
+ },
+ {
+   "ONSCode": "E06000006",
+   "LocalAuthority": "Halton",
+   "FIELD3": "",
+   "TotalBBIssued": 7620
+ },
+ {
+   "ONSCode": "E06000007",
+   "LocalAuthority": "Warrington",
+   "FIELD3": "",
+   "TotalBBIssued": 10160
+ },
+ {
+   "ONSCode": "E10000006",
+   "LocalAuthority": "Cumbria ",
+   "FIELD3": "",
+   "TotalBBIssued": 29448
+ },
+ {
+   "ONSCode": "E08000001",
+   "LocalAuthority": "Bolton",
+   "FIELD3": "",
+   "TotalBBIssued": 15638
+ },
+ {
+   "ONSCode": "E08000002",
+   "LocalAuthority": "Bury",
+   "FIELD3": "",
+   "TotalBBIssued": 10001
+ },
+ {
+   "ONSCode": "E08000003",
+   "LocalAuthority": "Manchester",
+   "FIELD3": "",
+   "TotalBBIssued": 16011
+ },
+ {
+   "ONSCode": "E08000004",
+   "LocalAuthority": "Oldham ",
+   "FIELD3": "",
+   "TotalBBIssued": 9613
+ },
+ {
+   "ONSCode": "E08000005",
+   "LocalAuthority": "Rochdale",
+   "FIELD3": "",
+   "TotalBBIssued": 10702
+ },
+ {
+   "ONSCode": "E08000006",
+   "LocalAuthority": "Salford",
+   "FIELD3": "",
+   "TotalBBIssued": 12565
+ },
+ {
+   "ONSCode": "E08000007",
+   "LocalAuthority": "Stockport",
+   "FIELD3": "",
+   "TotalBBIssued": 13144
+ },
+ {
+   "ONSCode": "E08000008",
+   "LocalAuthority": "Tameside",
+   "FIELD3": "",
+   "TotalBBIssued": 10822
+ },
+ {
+   "ONSCode": "E08000009",
+   "LocalAuthority": "Trafford",
+   "FIELD3": "",
+   "TotalBBIssued": 9850
+ },
+ {
+   "ONSCode": "E08000010",
+   "LocalAuthority": "Wigan",
+   "FIELD3": "",
+   "TotalBBIssued": 20173
+ },
+ {
+   "ONSCode": "E10000017",
+   "LocalAuthority": "Lancashire",
+   "FIELD3": "",
+   "TotalBBIssued": 60460
+ },
+ {
+   "ONSCode": "E08000011",
+   "LocalAuthority": "Knowsley ",
+   "FIELD3": "",
+   "TotalBBIssued": 7660
+ },
+ {
+   "ONSCode": "E08000012",
+   "LocalAuthority": "Liverpool",
+   "FIELD3": "",
+   "TotalBBIssued": 18180
+ },
+ {
+   "ONSCode": "E08000014",
+   "LocalAuthority": "Sefton",
+   "FIELD3": "",
+   "TotalBBIssued": 13941
+ },
+ {
+   "ONSCode": "E08000013",
+   "LocalAuthority": "St. Helens",
+   "FIELD3": "",
+   "TotalBBIssued": 12019
+ },
+ {
+   "ONSCode": "E08000015",
+   "LocalAuthority": "Wirral",
+   "FIELD3": "",
+   "TotalBBIssued": 18121
+ },
+ {
+   "ONSCode": "E06000011",
+   "LocalAuthority": "East Riding of Yorkshire",
+   "FIELD3": "",
+   "TotalBBIssued": 21249
+ },
+ {
+   "ONSCode": "E06000010",
+   "LocalAuthority": "City of Kingston upon Hull",
+   "FIELD3": "",
+   "TotalBBIssued": 11970
+ },
+ {
+   "ONSCode": "E06000012",
+   "LocalAuthority": "North East Lincolnshire",
+   "FIELD3": "",
+   "TotalBBIssued": 7587
+ },
+ {
+   "ONSCode": "E06000013",
+   "LocalAuthority": "North Lincolnshire",
+   "FIELD3": "",
+   "TotalBBIssued": 11247
+ },
+ {
+   "ONSCode": "E06000014",
+   "LocalAuthority": "York",
+   "FIELD3": "",
+   "TotalBBIssued": 7483
+ },
+ {
+   "ONSCode": "E10000023",
+   "LocalAuthority": "North Yorkshire",
+   "FIELD3": "",
+   "TotalBBIssued": 31698
+ },
+ {
+   "ONSCode": "E08000016",
+   "LocalAuthority": "Barnsley",
+   "FIELD3": "",
+   "TotalBBIssued": 13189
+ },
+ {
+   "ONSCode": "E08000017",
+   "LocalAuthority": "Doncaster",
+   "FIELD3": "",
+   "TotalBBIssued": 14828
+ },
+ {
+   "ONSCode": "E08000018",
+   "LocalAuthority": "Rotherham ",
+   "FIELD3": "",
+   "TotalBBIssued": 15520
+ },
+ {
+   "ONSCode": "E08000019",
+   "LocalAuthority": "Sheffield",
+   "FIELD3": "",
+   "TotalBBIssued": 21504
+ },
+ {
+   "ONSCode": "E08000032",
+   "LocalAuthority": "Bradford ",
+   "FIELD3": "",
+   "TotalBBIssued": 16020
+ },
+ {
+   "ONSCode": "E08000033",
+   "LocalAuthority": "Calderdale",
+   "FIELD3": "",
+   "TotalBBIssued": 9407
+ },
+ {
+   "ONSCode": "E08000034",
+   "LocalAuthority": "Kirklees ",
+   "FIELD3": "",
+   "TotalBBIssued": 18817
+ },
+ {
+   "ONSCode": "E08000035",
+   "LocalAuthority": "Leeds ",
+   "FIELD3": "",
+   "TotalBBIssued": 30758
+ },
+ {
+   "ONSCode": "E08000036",
+   "LocalAuthority": "Wakefield",
+   "FIELD3": "",
+   "TotalBBIssued": 18240
+ },
+ {
+   "ONSCode": "E06000015",
+   "LocalAuthority": "Derby ",
+   "FIELD3": "",
+   "TotalBBIssued": 13014
+ },
+ {
+   "ONSCode": "E06000016",
+   "LocalAuthority": "Leicester",
+   "FIELD3": "",
+   "TotalBBIssued": 13660
+ },
+ {
+   "ONSCode": "E06000018",
+   "LocalAuthority": "Nottingham",
+   "FIELD3": "",
+   "TotalBBIssued": 10009
+ },
+ {
+   "ONSCode": "E06000017",
+   "LocalAuthority": "Rutland ",
+   "FIELD3": "",
+   "TotalBBIssued": 1824
+ },
+ {
+   "ONSCode": "E10000007",
+   "LocalAuthority": "Derbyshire",
+   "FIELD3": "",
+   "TotalBBIssued": 51477
+ },
+ {
+   "ONSCode": "E10000018",
+   "LocalAuthority": "Leicestershire",
+   "FIELD3": "",
+   "TotalBBIssued": 32504
+ },
+ {
+   "ONSCode": "E10000019",
+   "LocalAuthority": "Lincolnshire ",
+   "FIELD3": "",
+   "TotalBBIssued": 44027
+ },
+ {
+   "ONSCode": "E10000021",
+   "LocalAuthority": "Northamptonshire ",
+   "FIELD3": "",
+   "TotalBBIssued": 35501
+ },
+ {
+   "ONSCode": "E10000024",
+   "LocalAuthority": "Nottinghamshire",
+   "FIELD3": "",
+   "TotalBBIssued": 42917
+ },
+ {
+   "ONSCode": "E06000019",
+   "LocalAuthority": "County of Herefordshire",
+   "FIELD3": "",
+   "TotalBBIssued": 8433
+ },
+ {
+   "ONSCode": "E06000051",
+   "LocalAuthority": "Shropshire ",
+   "FIELD3": "",
+   "TotalBBIssued": 14549
+ },
+ {
+   "ONSCode": "E06000021",
+   "LocalAuthority": "Stoke-on-Trent",
+   "FIELD3": "",
+   "TotalBBIssued": 13399
+ },
+ {
+   "ONSCode": "E06000020",
+   "LocalAuthority": "Telford and Wrekin",
+   "FIELD3": "",
+   "TotalBBIssued": 8760
+ },
+ {
+   "ONSCode": "E10000028",
+   "LocalAuthority": "Staffordshire",
+   "FIELD3": "",
+   "TotalBBIssued": 56461
+ },
+ {
+   "ONSCode": "E10000031",
+   "LocalAuthority": "Warwickshire",
+   "FIELD3": "",
+   "TotalBBIssued": 24743
+ },
+ {
+   "ONSCode": "E08000025",
+   "LocalAuthority": "Birmingham",
+   "FIELD3": "",
+   "TotalBBIssued": 38172
+ },
+ {
+   "ONSCode": "E08000026",
+   "LocalAuthority": "Coventry",
+   "FIELD3": "",
+   "TotalBBIssued": 12728
+ },
+ {
+   "ONSCode": "E08000027",
+   "LocalAuthority": "Dudley ",
+   "FIELD3": "",
+   "TotalBBIssued": 17002
+ },
+ {
+   "ONSCode": "E08000028",
+   "LocalAuthority": "Sandwell ",
+   "FIELD3": "",
+   "TotalBBIssued": 15035
+ },
+ {
+   "ONSCode": "E08000029",
+   "LocalAuthority": "Solihull",
+   "FIELD3": "",
+   "TotalBBIssued": 10540
+ },
+ {
+   "ONSCode": "E08000030",
+   "LocalAuthority": "Walsall",
+   "FIELD3": "",
+   "TotalBBIssued": 14536
+ },
+ {
+   "ONSCode": "E08000031",
+   "LocalAuthority": "Wolverhampton",
+   "FIELD3": "",
+   "TotalBBIssued": 10112
+ },
+ {
+   "ONSCode": "E10000034",
+   "LocalAuthority": "Worcestershire",
+   "FIELD3": "",
+   "TotalBBIssued": 32903
+ },
+ {
+   "ONSCode": "E06000055",
+   "LocalAuthority": "Bedford",
+   "FIELD3": "",
+   "TotalBBIssued": 6679
+ },
+ {
+   "ONSCode": "E06000056",
+   "LocalAuthority": "Central Bedfordshire",
+   "FIELD3": "",
+   "TotalBBIssued": 10986
+ },
+ {
+   "ONSCode": "E06000032",
+   "LocalAuthority": "Luton",
+   "FIELD3": "",
+   "TotalBBIssued": 6851
+ },
+ {
+   "ONSCode": "E06000031",
+   "LocalAuthority": "Peterborough",
+   "FIELD3": "",
+   "TotalBBIssued": 9030
+ },
+ {
+   "ONSCode": "E06000033",
+   "LocalAuthority": "Southend-on-Sea",
+   "FIELD3": "",
+   "TotalBBIssued": 6616
+ },
+ {
+   "ONSCode": "E06000034",
+   "LocalAuthority": "Thurrock",
+   "FIELD3": "",
+   "TotalBBIssued": 8287
+ },
+ {
+   "ONSCode": "E10000003",
+   "LocalAuthority": "Cambridgeshire",
+   "FIELD3": "",
+   "TotalBBIssued": 29655
+ },
+ {
+   "ONSCode": "E10000012",
+   "LocalAuthority": "Essex",
+   "FIELD3": "",
+   "TotalBBIssued": 62927
+ },
+ {
+   "ONSCode": "E10000015",
+   "LocalAuthority": "Hertfordshire ",
+   "FIELD3": "",
+   "TotalBBIssued": 56728
+ },
+ {
+   "ONSCode": "E10000020",
+   "LocalAuthority": "Norfolk ",
+   "FIELD3": "",
+   "TotalBBIssued": 37670
+ },
+ {
+   "ONSCode": "E10000029",
+   "LocalAuthority": "Suffolk",
+   "FIELD3": "",
+   "TotalBBIssued": 39471
+ },
+ {
+   "ONSCode": "E09000007",
+   "LocalAuthority": "Camden",
+   "FIELD3": "",
+   "TotalBBIssued": 5410
+ },
+ {
+   "ONSCode": "E09000001",
+   "LocalAuthority": "City of London",
+   "FIELD3": "",
+   "TotalBBIssued": 134
+ },
+ {
+   "ONSCode": "E09000012",
+   "LocalAuthority": "Hackney ",
+   "FIELD3": "",
+   "TotalBBIssued": 6285
+ },
+ {
+   "ONSCode": "E09000013",
+   "LocalAuthority": "Hammersmith and Fulham ",
+   "FIELD3": "",
+   "TotalBBIssued": 4144
+ },
+ {
+   "ONSCode": "E09000014",
+   "LocalAuthority": "Haringey",
+   "FIELD3": "",
+   "TotalBBIssued": 7850
+ },
+ {
+   "ONSCode": "E09000019",
+   "LocalAuthority": "Islington",
+   "FIELD3": "",
+   "TotalBBIssued": 7728
+ },
+ {
+   "ONSCode": "E09000020",
+   "LocalAuthority": "Kensington and Chelsea",
+   "FIELD3": "",
+   "TotalBBIssued": 2349
+ },
+ {
+   "ONSCode": "E09000022",
+   "LocalAuthority": "Lambeth ",
+   "FIELD3": "",
+   "TotalBBIssued": 5530
+ },
+ {
+   "ONSCode": "E09000023",
+   "LocalAuthority": "Lewisham ",
+   "FIELD3": "",
+   "TotalBBIssued": 6195
+ },
+ {
+   "ONSCode": "E09000025",
+   "LocalAuthority": "Newham ",
+   "FIELD3": "",
+   "TotalBBIssued": 8246
+ },
+ {
+   "ONSCode": "E09000028",
+   "LocalAuthority": "Southwark",
+   "FIELD3": "",
+   "TotalBBIssued": 5942
+ },
+ {
+   "ONSCode": "E09000030",
+   "LocalAuthority": "Tower Hamlets",
+   "FIELD3": "",
+   "TotalBBIssued": 5669
+ },
+ {
+   "ONSCode": "E09000032",
+   "LocalAuthority": "Wandsworth",
+   "FIELD3": "",
+   "TotalBBIssued": 6426
+ },
+ {
+   "ONSCode": "E09000033",
+   "LocalAuthority": "Westminster",
+   "FIELD3": "",
+   "TotalBBIssued": 4476
+ },
+ {
+   "ONSCode": "E09000002",
+   "LocalAuthority": "Barking and Dagenham",
+   "FIELD3": "",
+   "TotalBBIssued": 6961
+ },
+ {
+   "ONSCode": "E09000003",
+   "LocalAuthority": "Barnet",
+   "FIELD3": "",
+   "TotalBBIssued": 14673
+ },
+ {
+   "ONSCode": "E09000004",
+   "LocalAuthority": "Bexley",
+   "FIELD3": "",
+   "TotalBBIssued": 9742
+ },
+ {
+   "ONSCode": "E09000005",
+   "LocalAuthority": "Brent ",
+   "FIELD3": "",
+   "TotalBBIssued": 9245
+ },
+ {
+   "ONSCode": "E09000006",
+   "LocalAuthority": "Bromley",
+   "FIELD3": "",
+   "TotalBBIssued": 10046
+ },
+ {
+   "ONSCode": "E09000008",
+   "LocalAuthority": "Croydon",
+   "FIELD3": "",
+   "TotalBBIssued": 11654
+ },
+ {
+   "ONSCode": "E09000009",
+   "LocalAuthority": "Ealing",
+   "FIELD3": "",
+   "TotalBBIssued": 10370
+ },
+ {
+   "ONSCode": "E09000010",
+   "LocalAuthority": "Enfield",
+   "FIELD3": "",
+   "TotalBBIssued": 10723
+ },
+ {
+   "ONSCode": "E09000011",
+   "LocalAuthority": "Greenwich",
+   "FIELD3": "",
+   "TotalBBIssued": 6836
+ },
+ {
+   "ONSCode": "E09000015",
+   "LocalAuthority": "Harrow",
+   "FIELD3": "",
+   "TotalBBIssued": 8125
+ },
+ {
+   "ONSCode": "E09000016",
+   "LocalAuthority": "Havering",
+   "FIELD3": "",
+   "TotalBBIssued": 9751
+ },
+ {
+   "ONSCode": "E09000017",
+   "LocalAuthority": "Hillingdon",
+   "FIELD3": "",
+   "TotalBBIssued": 11985
+ },
+ {
+   "ONSCode": "E09000018",
+   "LocalAuthority": "Hounslow",
+   "FIELD3": "",
+   "TotalBBIssued": 6759
+ },
+ {
+   "ONSCode": "E09000021",
+   "LocalAuthority": "Kingston upon Thames",
+   "FIELD3": "",
+   "TotalBBIssued": 4490
+ },
+ {
+   "ONSCode": "E09000024",
+   "LocalAuthority": "Merton",
+   "FIELD3": "",
+   "TotalBBIssued": 5537
+ },
+ {
+   "ONSCode": "E09000026",
+   "LocalAuthority": "Redbridge",
+   "FIELD3": "",
+   "TotalBBIssued": 10920
+ },
+ {
+   "ONSCode": "E09000027",
+   "LocalAuthority": "Richmond upon Thames",
+   "FIELD3": "",
+   "TotalBBIssued": 4980
+ },
+ {
+   "ONSCode": "E09000029",
+   "LocalAuthority": "Sutton",
+   "FIELD3": "",
+   "TotalBBIssued": 6940
+ },
+ {
+   "ONSCode": "E09000031",
+   "LocalAuthority": "Waltham Forest",
+   "FIELD3": "",
+   "TotalBBIssued": 8987
+ },
+ {
+   "ONSCode": "E06000036",
+   "LocalAuthority": "Bracknell Forest",
+   "FIELD3": "",
+   "TotalBBIssued": 4034
+ },
+ {
+   "ONSCode": "E06000043",
+   "LocalAuthority": "Brighton and Hove",
+   "FIELD3": "",
+   "TotalBBIssued": 10813
+ },
+ {
+   "ONSCode": "E06000046",
+   "LocalAuthority": "Isle of Wight",
+   "FIELD3": "",
+   "TotalBBIssued": 8798
+ },
+ {
+   "ONSCode": "E06000035",
+   "LocalAuthority": "Medway",
+   "FIELD3": "",
+   "TotalBBIssued": 12923
+ },
+ {
+   "ONSCode": "E06000042",
+   "LocalAuthority": "Milton Keynes",
+   "FIELD3": "",
+   "TotalBBIssued": 10644
+ },
+ {
+   "ONSCode": "E06000044",
+   "LocalAuthority": "Portsmouth",
+   "FIELD3": "",
+   "TotalBBIssued": 6947
+ },
+ {
+   "ONSCode": "E06000038",
+   "LocalAuthority": "Reading",
+   "FIELD3": "",
+   "TotalBBIssued": 4593
+ },
+ {
+   "ONSCode": "E06000039",
+   "LocalAuthority": "Slough",
+   "FIELD3": "",
+   "TotalBBIssued": 3806
+ },
+ {
+   "ONSCode": "E06000045",
+   "LocalAuthority": "Southampton",
+   "FIELD3": "",
+   "TotalBBIssued": 8516
+ },
+ {
+   "ONSCode": "E06000037",
+   "LocalAuthority": "West Berkshire",
+   "FIELD3": "",
+   "TotalBBIssued": 5393
+ },
+ {
+   "ONSCode": "E06000040",
+   "LocalAuthority": "Windsor and Maidenhead",
+   "FIELD3": "",
+   "TotalBBIssued": 6814
+ },
+ {
+   "ONSCode": "E06000041",
+   "LocalAuthority": "Wokingham",
+   "FIELD3": "",
+   "TotalBBIssued": 5817
+ },
+ {
+   "ONSCode": "E10000002",
+   "LocalAuthority": "Buckinghamshire",
+   "FIELD3": "",
+   "TotalBBIssued": 22919
+ },
+ {
+   "ONSCode": "E10000011",
+   "LocalAuthority": "East Sussex",
+   "FIELD3": "",
+   "TotalBBIssued": 23048
+ },
+ {
+   "ONSCode": "E10000014",
+   "LocalAuthority": "Hampshire",
+   "FIELD3": "",
+   "TotalBBIssued": 58808
+ },
+ {
+   "ONSCode": "E10000016",
+   "LocalAuthority": "Kent",
+   "FIELD3": "",
+   "TotalBBIssued": 73815
+ },
+ {
+   "ONSCode": "E10000025",
+   "LocalAuthority": "Oxfordshire ",
+   "FIELD3": "",
+   "TotalBBIssued": 21866
+ },
+ {
+   "ONSCode": "E10000030",
+   "LocalAuthority": "Surrey",
+   "FIELD3": "",
+   "TotalBBIssued": 40831
+ },
+ {
+   "ONSCode": "E10000032",
+   "LocalAuthority": "West Sussex",
+   "FIELD3": "",
+   "TotalBBIssued": 38226
+ },
+ {
+   "ONSCode": "E06000022",
+   "LocalAuthority": "Bath and North East Somerset",
+   "FIELD3": "",
+   "TotalBBIssued": 7112
+ },
+ {
+   "ONSCode": "E06000058",
+   "LocalAuthority": "Bournemouth Christchurch and Poole",
+   "FIELD3": "",
+   "TotalBBIssued": 20961
+ },
+ {
+   "ONSCode": "E06000023",
+   "LocalAuthority": "City of Bristol",
+   "FIELD3": "",
+   "TotalBBIssued": 18079
+ },
+ {
+   "ONSCode": "E06000052",
+   "LocalAuthority": "Cornwall",
+   "FIELD3": "",
+   "TotalBBIssued": 29386
+ },
+ {
+   "ONSCode": "E06000053",
+   "LocalAuthority": "Isles of Scilly",
+   "FIELD3": "",
+   "TotalBBIssued": 55
+ },
+ {
+   "ONSCode": "E06000024",
+   "LocalAuthority": "North Somerset",
+   "FIELD3": "",
+   "TotalBBIssued": 11861
+ },
+ {
+   "ONSCode": "E06000026",
+   "LocalAuthority": "Plymouth",
+   "FIELD3": "",
+   "TotalBBIssued": 11677
+ },
+ {
+   "ONSCode": "E06000025",
+   "LocalAuthority": "South Gloucestershire",
+   "FIELD3": "",
+   "TotalBBIssued": 14131
+ },
+ {
+   "ONSCode": "E06000030",
+   "LocalAuthority": "Swindon",
+   "FIELD3": "",
+   "TotalBBIssued": 11224
+ },
+ {
+   "ONSCode": "E06000027",
+   "LocalAuthority": "Torbay",
+   "FIELD3": "",
+   "TotalBBIssued": 8384
+ },
+ {
+   "ONSCode": "E06000054",
+   "LocalAuthority": "Wiltshire",
+   "FIELD3": "",
+   "TotalBBIssued": 22938
+ },
+ {
+   "ONSCode": "E10000008",
+   "LocalAuthority": "Devon",
+   "FIELD3": "",
+   "TotalBBIssued": 40791
+ },
+ {
+   "ONSCode": "E06000059",
+   "LocalAuthority": "Dorset",
+   "FIELD3": "",
+   "TotalBBIssued": 26889
+ },
+ {
+   "ONSCode": "E10000013",
+   "LocalAuthority": "Gloucestershire",
+   "FIELD3": "",
+   "TotalBBIssued": 29823
+ },
+ {
+   "ONSCode": "E10000027",
+   "LocalAuthority": "Somerset ",
+   "FIELD3": "",
+   "TotalBBIssued": 30872
+ }
+]

@@ -1,0 +1,137 @@
+section .mainPage {
+  text-align: center;
+  align-items: center;
+}
+.break {
+  height: 2em;
+}
+.big-break {
+  height: 6em;
+}
+.top-div {
+  height: 10em;
+}
+.discover {
+  font-family: "Alfa Slab One", cursive;
+  text-decoration: none;
+  letter-spacing: 6px;
+  font-weight: 400;
+  font-size: 8em;
+  color: #2c292b;
+  text-shadow: 15px 15px lightgray;
+}
+.small-title {
+  font-size: 1em;
+}
+
+button#startButton {
+  padding: 1em 5em;
+  background-color: white;
+  border: 2px dotted #2c292b;
+  cursor: pointer;
+}
+
+.title {
+  margin-top: -5em;
+}
+
+.left {
+  text-align: left;
+}
+
+.border {
+  padding: 5em;
+  border: 2px solid black;
+}
+.cost {
+  text-align: left;
+  font-weight: bold;
+  font-size: 24px;
+  display: inline-block;
+}
+
+.coin {
+  list-style: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+li img {
+  height: 50px;
+  width: 50px;
+}
+
+li {
+  margin-bottom: 2em;
+}
+
+.popup {
+  border: 2px dotted black;
+  background-color: white;
+  z-index: 1000;
+  position: absolute;
+  margin-top: 15%;
+  width: 70em;
+  margin-left: 20%;
+  padding: 2em;
+}
+
+.my-label {
+  font-weight: bold;
+}
+
+.listnobullet {
+  display: flex;
+  list-style-type: none;
+  margin-right: 1em;
+}
+
+.row {
+  display: flex;
+}
+.listofRole {
+  border: 2px dotted black;
+  width: 100%;
+  height: 600px;
+  margin-right: 1em;
+  padding: 1em;
+  width: 400px;
+  box-shadow: 5px 5px 5px lightgray;
+}
+
+.turbine {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.totalEnergy {
+  text-align: left;
+  margin-left: 20px;
+}
+.totallist {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.infralist {
+  text-align: left;
+}
+
+.textleft {
+  text-align: left;
+  margin-left: 1em;
+}
+
+.row {
+  display: flex;
+}
+.mapcontainerof {
+  flex: 70%;
+  display: inline-block;
+}
+
+.details {
+  flex: 28%;
+  display: inline-block;
+  height: 70vh;
+}

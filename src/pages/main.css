@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Pacifico&display=swap");
+section .mainPage {
+  text-align: left;
+  align-items: left;
+}
+.title {
+  padding: 1em;
+}
+.main-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2c292b;
+  text-align: left;
+}
+.sub-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  text-align: left;
+  font-weight: 400;
+}
+.card-title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #2c292b;
+  text-align: left;
+  margin-left: 1.6em;
+  margin-top: 1em;
+  color: rgb(58, 58, 58);
+}
+
+.card {
+  background-color: rgb(246, 246, 252);
+  height: 30vh;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.container-row {
+  display: flex;
+  height: 100%;
+}
+.row-one {
+  width: 55%;
+  height: 100%;
+}
+.row-two {
+  width: 45%;
+  height: 100%;
+}
+.image {
+  height: 100%;
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+}
+.description {
+  text-align: left;
+  margin-left: 2.6em;
+  font-weight: 400;
+}
+.learnmore {
+  text-decoration: none;
+  text-align: left;
+  margin-left: 3em;
+  color: blue;
+}
+.no-underline {
+  text-decoration: none;
+}
+.list {
+  text-align: left;
+  margin-left: 2em;
+  font-size: 1.3em;
+}
+.card-half {
+  width: 50%;
+  height: 100%;
+}
+.container-half {
+  display: flex;
+  height: 100%;
+}
+.card-half-left {
+  flex: 50%;
+  background-color: rgb(246, 246, 252);
+  padding: 1em;
+}
+
+.card-half-right {
+  flex: 50%;
+  background-color: rgb(246, 246, 252);
+  padding: 1em;
+  margin-left: 1em;
+}
+
+.underlined {
+  text-decoration: underline;
+  color: rgb(58, 58, 58);
+}
+.card-two {
+  height: 30vh;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+
+.details {
+  text-align: left;
+}

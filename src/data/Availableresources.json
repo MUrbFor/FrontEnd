@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "cost" : 0,
+        "dataProvider" : "",
+        "description" : "This dataset contains Enschede boundaries",
+        "endpoint" : "<Boundary />",
+        "title" : "Enschede Boundary"
+    },
+    {
+        "id": 1,
+        "cost" : 1,
+        "dataProvider" : "a",
+        "description" : "a",
+        "endpoint" : "This dataset contains name and location of Enschede neighbourhoods",
+        "title" : "Enschede Neighbourhoods"
+    },
+    {
+        "id": 2,
+        "cost" : 1,
+        "dataProvider" : "a",
+        "description" : "a",
+        "endpoint" : "Landuse",
+        "title" : "Enschede Landuse"
+    },
+    {
+        "id": 3,
+        "cost" : 1,
+        "dataProvider" : "a",
+        "description" : "a",
+        "endpoint" : "Rooftop",
+        "title" : "Enschede Rooftops"
+    },
+    {
+        "id": 4,
+        "cost" : 1,
+        "dataProvider" : "a",
+        "description" : "a",
+        "endpoint" : "Suitablesolar",
+        "title" : "Suitable Areas for Solar Panels"
+    },
+    {
+        "id": 5,
+        "cost" : 1,
+        "dataProvider" : "a",
+        "description" : "a",
+        "endpoint" : "Suitablewind",
+        "title" : "Suitable Areas for Wind Turbines"
+    }
+]
