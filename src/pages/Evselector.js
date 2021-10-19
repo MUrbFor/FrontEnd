@@ -178,11 +178,11 @@ function Evselector() {
           }
 
 
-    //list of Wind Turbines control
+    //List of added points
     //==============================================================================================
-    function PointList(props) {
-        const turbines = props.numbers;
-        const listTurbines = turbines.map((number) =>
+    function AddedPoints(props) {
+        const evcharge = props.numbers;
+        const listofev = evcharge.map((number) =>
             <li className="infralist"key={number.id}>
                 <p>EV Charging Point ID: {number.id}</p>
                 <p>Type: {number.type}</p>
@@ -191,7 +191,7 @@ function Evselector() {
             </li>
         );
         return (
-            <ul className="turbine"> {listTurbines}</ul>
+            <ul className="ev"> {listofev}</ul>
         );
     }
 
@@ -256,7 +256,7 @@ function Evselector() {
         </div>
         <div className="details">
             <div>
-                <PointList numbers= {mapLayers} />
+                <AddedPoints numbers= {mapLayers} />
 
             </div>
         </div>

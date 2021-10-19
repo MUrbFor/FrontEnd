@@ -1,9 +1,9 @@
 import React from 'react';
 import { LayersControl, GeoJSON, FeatureGroup } from 'react-leaflet';
-import {features} from "../../data/Neighbourhoods.json";
+import {features} from "../../data/FILENAME";
 
 
-function Neighbourhood() {
+function LAYERNAME() {
     const style = (feature => {
         return ({
             fillColor: 'white',
@@ -15,9 +15,9 @@ function Neighbourhood() {
         });
     });
     function onEachFeature(feature, layer) {
-        if (feature.properties && feature.properties.BU_NAAM) {
+        if (feature.properties && feature.properties.PROPERTY) {
             //layer.bindPopup(feature.properties.BU_NAAM);
-            layer.bindTooltip(feature.properties.BU_NAAM,
+            layer.bindTooltip(feature.properties.PROPERTY,
             {permanent: true, direction:"center", className: "my-label"}
            ).openTooltip()
         }
@@ -28,8 +28,8 @@ function Neighbourhood() {
         return(feature);
     });
     return(
-        <LayersControl.Overlay name="Enschede Neighbourhoods">
-        <FeatureGroup name="neighbourhood">
+        <LayersControl.Overlay name="LAYERNAME">
+        <FeatureGroup name="LAYERNAME">
             {feature && (
                 <GeoJSON 
                     data={feature} 
@@ -42,4 +42,4 @@ function Neighbourhood() {
     );
 }
 
-export default Neighbourhood;
+export default LAYERNAME;
