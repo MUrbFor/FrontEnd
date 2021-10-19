@@ -77,31 +77,8 @@ function Evselector() {
       //============================================================
     const favoritesCtx = useContext(FavoritesContext);
     const [mapLayers, setMapLayers] = useState([]);
-    const [added, setTotalEnergy] = useState(0);
-    const [seconds, setSeconds] = useState(0);
-    const [years, setYears] = useState(2021);
-    const [hidden, setHidden] = useState(false);
-    const [hiddentoo, setHiddentoo] = useState(false);
-
-
-
     const totalArea = mapLayers.reduce((totalarea, area) => totalarea + area.area, 0);
-    const energyfarm = totalArea* 750/10000;
-    const agriculture = totalArea/10000;
-    const totalEnergy = energyfarm + added;
-    const lefttogoal =  147000 - totalEnergy;
 
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-          setYears(year => year + 1);
-          if (added !==0){
-          setTotalEnergy(added => added + 3.5);
-          }
-          setSeconds(seconds => seconds + 1);
-        }, 480000);
-        return () => clearInterval(interval);
-      }, []);
 
     const _onCreate = e => {
         //console.log(e);
@@ -116,7 +93,6 @@ function Evselector() {
         };
         if(layerType === "marker"){
             const{_leaflet_id} = layer;
-            setTotalEnergy(added => added + 3.5);
             setMapLayers(layers => [...layers, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", area: 0},
         ]);
     };
@@ -133,18 +109,8 @@ function Evselector() {
         Object.values(_layers).map(({_leaflet_id}) => {
             setMapLayers( layers => 
                 layers.filter( l => l.id !== _leaflet_id));
-                setTotalEnergy(0);
         });
     };
-
-    //total area
-    //=========================================================
-    const infrastructures = mapLayers.length;
-
-
-    let myFilter =[
-        'grayscale: 40%',
-    ];
 
     //Marker Setup
     //==============================================================================================
@@ -158,24 +124,24 @@ function Evselector() {
     
     //Button control
     //==============================================================================================
-        function accept() {
-            setTotalEnergy(added => added + 50);
-            setHidden(true);
+        // function accept() {
+        //     setTotalEnergy(added => added + 50);
+        //     setHidden(true);
 
-          }
-          function reject() {
-            setTotalEnergy(added => added );
-            setHidden(true);
-          }
+        //   }
+        //   function reject() {
+        //     setTotalEnergy(added => added );
+        //     setHidden(true);
+        //   }
         
-        function accepttoo() {
-            setTotalEnergy(added => added + 20);
-            setHiddentoo(true);
+        // function accepttoo() {
+        //     setTotalEnergy(added => added + 20);
+        //     setHiddentoo(true);
             
-          }
-          function rejecttoo() {
-            setHiddentoo(true);
-          }
+        //   }
+        //   function rejecttoo() {
+        //     setHiddentoo(true);
+        //   }
 
 
     //List of added points
