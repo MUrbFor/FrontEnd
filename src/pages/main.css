@@ -119,3 +119,11 @@ section .mainPage {
 .no-bullet {
   list-style-type: none;
 }
+
+.row {
+  width: 49%;
+}
+
+.secondrow {
+  width: 50%;
+}

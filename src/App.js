@@ -2,7 +2,6 @@ import { Route, Switch } from 'react-router-dom';
 import MainPage from './pages/Main';
 import CataloguePage from './pages/CataloguePage';
 import ContributePage from './pages/ContributePage';
-import FavoritesPage from './pages/Favorites';
 import About from './pages/About';
 import ContactUs from './pages/ContactUs';
 import Tools from './pages/Tools';
@@ -20,9 +19,6 @@ function App() {
         </Route>
         <Route path='/contribute'>
           <ContributePage />
-        </Route>
-        <Route path='/favorites'>
-          <FavoritesPage />
         </Route>
         <Route path='/about'>
           <About />

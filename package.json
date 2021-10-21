@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.2",
+    "@turf/turf": "^6.5.0",
     "algoliasearch": "^4.10.5",
     "axios": "^0.21.1",
     "http-proxy-middleware": "^2.0.1",
