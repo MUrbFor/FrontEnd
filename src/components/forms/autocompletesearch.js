@@ -8,6 +8,8 @@ function Autocomplete () {
     //search autocomplete
     //===========================================================================
     const loadedData = data.features;
+    const [ selectedLA, setselectedLA ] = useState(); 
+
     const items = [];
     const hello = "hello";
     for(let i=0; i< loadedData.length;i++){
@@ -19,23 +21,21 @@ function Autocomplete () {
       const handleOnSearch = (string, results) => {
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
-        console.log(string, results)
       }
     
       const handleOnHover = (result) => {
         // the item hovered
-        console.log(result)
       }
     
       const handleOnSelect = (item) => {
         // the item selected
-        console.log(item)
+        setselectedLA(item.name);
       }
     
       const handleOnFocus = () => {
-        console.log('Focused')
       }
-    
+      console.log(selectedLA);
+
       const formatResult = (item) => {
         return item;
        // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html

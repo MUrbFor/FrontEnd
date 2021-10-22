@@ -8,4 +8,11 @@ module.exports = function(app) {
           changeOrigin: true,
         })
       );
+    app.use(
+        '/?format=json/',
+        createProxyMiddleware({
+          target: 'https://nominatim.openstreetmap.org',
+          changeOrigin: true,
+        })
+      );
 };

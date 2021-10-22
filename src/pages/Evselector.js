@@ -11,13 +11,66 @@ import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 import RangeSlider from 'react-bootstrap-range-slider';
 import { chargeType } from "../components/forms/Chargepoint";
 import { goals } from "../components/forms/Goals";
-import Autocomplete from "../components/forms/autocompletesearch";
 import axios from 'axios';
-import { distance, point } from '@turf/turf'
-
-
+import { distance, point, featureCollection, nearestPoint } from '@turf/turf'
+import { ReactSearchAutocomplete } from 'react-search-autocomplete';
+import data from '../data/GBLayer';
+import stops from '../data/stops';
 function Evselector() {
 
+    //all states 
+    //=========================================================================
+    const [selectedLA, setselectedLA ] = useState(); 
+    const [map, setMap] = useState(null);
+
+        //search autocomplete
+    //===========================================================================
+    const loadedData = data.features;
+    const targetFeatures = [];
+    for(let i=0; i< stops.length;i++){
+        var targetcoord = [stops[i].Longitude, stops[i].Latitude];
+        targetFeatures[i] = point(targetcoord);
+    }   
+    var points = featureCollection(targetFeatures);
+
+    const items = [];
+    for(let i=0; i< loadedData.length;i++){
+        var names = loadedData[i].properties.LAD13NM;
+        items[i] = {'name':names, 'id': i};
+
+    }
+    //console.log(items);
+      const handleOnSearch = (string, results) => {
+        // onSearch will have as the first callback parameter
+        // the string searched and for the second the results.
+      }
+    
+      const handleOnHover = (result) => {
+        // the item hovered
+      }
+    
+      const handleOnSelect = (item) => {
+        // the item selected
+        setselectedLA(item.name);
+
+        axios.get(`https://nominatim.openstreetmap.org/?format=json&city=${item.name}`)
+        .then(res => {               
+            // const all_addresses = res.data;
+            var results = res.data;
+            map.flyTo([results[0].lat, results[0].lon], 14);
+            // var LAcenter = [results[0].lat, results[0].lon];
+            // setgeocodedLA(LAcenter);
+            // setTheArray(address => [...address, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", address: all_addresses.display_name}]);
+        }); 
+      }
+      const handleOnFocus = () => {
+      }
+      const formatResult = (item) => {
+        return item;
+       // return (<p dangerouslySetInnerHTML={{__html: '<strong>'+item+'</strong>'}}></p>); //To format result as html
+      }
+
+    
     //sliders
     //===================================================================
     const [ value, setValue ] = useState(0); 
@@ -42,13 +95,18 @@ function Evselector() {
         };
         if(layerType === "marker"){
             const{_leaflet_id} = layer;
-            setMapLayers(layers => [...layers, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", area: 0},]);
             axios.get(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${layer._latlng.lat}&lon=${layer._latlng.lng}&zoom=18&addressdetails=1`)
                 .then(res => {               
                     const all_addresses = res.data;
-                    console.log(all_addresses);
-                    setTheArray(address => [...address, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", address: all_addresses.display_name}]);
+                    setTheArray(address => [...address, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", address: all_addresses.display_name, nearest: nearest.properties.distanceToPoint}]);
                 });
+            //calculating the distance using turf library
+            //===================================================================================
+            var targetPoint = point([layer._latlng.lat, layer._latlng.lng]);
+            var nearest = nearestPoint(targetPoint, points);
+            console.log(nearest);
+            setMapLayers(layers => [...layers, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", area: 0},]);
+
     };
     };
     const _onEdited = e => {
@@ -65,7 +123,6 @@ function Evselector() {
                 layers.filter( l => l.id !== _leaflet_id));
         });
     };
-    console.log(theArray);
     if (theArray.length > 1) {
         var from = point([theArray[0].latLngs.lat, theArray[0].latLngs.lng]);
         var to = point([theArray[1].latLngs.lat, theArray[1].latLngs.lng]);
@@ -98,13 +155,8 @@ function Evselector() {
         setCheckedState(updatedCheckedState);
     };
 
-    //Geocoding
+    //nearest
     //==============================================================================================
-
-
-
-
-
 
     return(
       <Layout>
@@ -118,7 +170,17 @@ function Evselector() {
         </section>
         <section>
             <h2 className="left">Where?</h2>
-            <Autocomplete />
+            <div style={{ width: 400 }}>
+            <ReactSearchAutocomplete
+                items={items}
+                onSearch={handleOnSearch}
+                onHover={handleOnHover}
+                onSelect={handleOnSelect}
+                onFocus={handleOnFocus}
+                autoFocus
+                formatResult={formatResult}
+            />
+            </div>
         </section>
         <br/>
         <section>
@@ -220,7 +282,7 @@ function Evselector() {
         <section>
         <div className="row-map">
         <div className="mapcontainerof">
-        <MapContainer style={{ height: "70vh" }} center={[54.973905, -1.616310]} zoom={14} scrollWheelZoom={true}>
+        <MapContainer style={{ height: "70vh" }} center={[54.975340, -1.612828]} zoom={14} scrollWheelZoom={true} whenCreated ={setMap}>
         <LayersControl position="topright">
             <LayersControl.BaseLayer checked name="OpenStreetMap.Mapnik">
             <TileLayer
@@ -248,6 +310,7 @@ function Evselector() {
                         {/* <p className="left-section">Address: {chargersdata.id}</p> */}
                         <p className="left-section">Address: {chargersdata.address}</p>
                         <p className="left-section">type: {chargersdata.type}</p>
+                        <p className="left-section">nearest: {chargersdata.nearest}</p>
                     </li>
                 );
                 })}
