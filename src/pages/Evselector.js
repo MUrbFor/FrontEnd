@@ -15,8 +15,36 @@ import axios from 'axios';
 import { distance, point, featureCollection, nearestPoint } from '@turf/turf'
 import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import data from '../data/GBLayer';
-import stops from '../data/stops';
+
+
+//mapLayers
+import stops from "../data/Stops.json";
+import METLayer from "../components/mapLayers/MET.js";
+import BCTLayer from "../components/mapLayers/BCT.js";
+import PLTLayer from "../components/mapLayers/PLT.js";
+import TXRLayer from "../components/mapLayers/TXR.js";
+import RSELayer from "../components/mapLayers/RSE.js";
+import AIRLayer from "../components/mapLayers/AIR.js";
+import FTDLayer from "../components/mapLayers/FTD.js";
+//import TrafficCount from "../components/mapLayers/TrafficCount.js";
+import LocalAuthoritiesLayer from "../components/mapLayers/LA.js";
+import BlueBadgeLayer from "../components/mapLayers/BlueBadge.js";
+import WalkCycle from "../components/mapLayers/WalkingCyclingData.js";
+import DurhamCarParks from "../components/mapLayers/DurhamCarParks.js";
+import VehicleType from '../components/mapLayers/VehicleType.js';
+import NumCars  from '../components/mapLayers/numCarsLA';
+import EnergyConsumptionLayer from "../components/mapLayers/EnergyCon.js";
+import DundeeStations from "../components/mapLayers/dundeeStations.js";
+import CurBEV, {CurULEV,Population, PrivULEV, CommercialULEV,CurULEVPercent,ResidentialProperties,percentPropertiesTenements,TotalULEVs2045,TotalBEVs2045} from '../components/mapLayers/cityPopExports.js';
+
+
+
+
 function Evselector() {
+    const [legeState, setLegeState] = React.useState([]);
+    const handleLedgeChange = (e) => {
+        setLegeState(e);
+    };
 
     //all states 
     //=========================================================================
@@ -282,21 +310,62 @@ function Evselector() {
         <section>
         <div className="row-map">
         <div className="mapcontainerof">
-        <MapContainer style={{ height: "70vh" }} center={[54.975340, -1.612828]} zoom={14} scrollWheelZoom={true} whenCreated ={setMap}>
+        <MapContainer style={{ height: "70vh" }} center={[54.975340, -1.612828]} zoom={14} scrollWheelZoom={true}>
         <LayersControl position="topright">
-            <LayersControl.BaseLayer checked name="OpenStreetMap.Mapnik">
+            <LayersControl.BaseLayer checked name="Map Overlays">
             <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             filter= "myFilter"
+            eventHandlers={{
+                add: (e) => {
+                  console.log("Added Layer:", e.target);
+                },
+                remove: (e) => {
+                  console.log("Removed layer:", e.target);
+                }
+              }}
             />
         </LayersControl.BaseLayer>
             <FeatureGroup>
                 <EditControl position="topleft" onCreated={_onCreate} onEdited={_onEdited} onDeleted={_onDeleted} draw={{rectangle: false, polyline:false, circle: false, circlemarker: false, marker: true}}/>
             </FeatureGroup>
-            <LayerGroup>
-
+            <LayerGroup name="nodes">
+                <METLayer />
+                <TXRLayer legeState={legeState} handleLedgeChange = {handleLedgeChange} dogs="props Passed"/>
+                <RSELayer />
+                <AIRLayer />
+                <FTDLayer />
+                
+                {/* <BCTLayer /> */}
             </LayerGroup>
+            <LayerGroup name="traffic count">
+                {/* <TrafficCount /> */}
+                <LocalAuthoritiesLayer />
+                <BlueBadgeLayer legeState={legeState} handleLedgeChange = {handleLedgeChange}/>
+                <VehicleType/>
+                <NumCars/>
+                <WalkCycle legeState={legeState} handleLedgeChange = {handleLedgeChange}/>
+            </LayerGroup>
+             <LayerGroup name="others">
+                <DurhamCarParks/>
+                <Population/>
+                <CurBEV/>
+                <CurULEV/>
+                <PrivULEV/>
+                <CommercialULEV/>
+                <CurULEVPercent/>
+                <ResidentialProperties/>
+                <percentPropertiesTenements/>
+                <TotalULEVs2045/>
+                <TotalBEVs2045/>
+
+
+                {/* <DundeeStations/> */}
+                {/* <TrafficCount/>  */}
+                
+
+            </LayerGroup> 
         </LayersControl>
         </MapContainer>
         </div>
