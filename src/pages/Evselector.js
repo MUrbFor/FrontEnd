@@ -185,7 +185,6 @@ function Evselector() {
     };
 
     //nearest
-    //var addedBool = false;
 
     
     return(
@@ -321,10 +320,10 @@ function Evselector() {
                 filter= "myFilter"
                 eventHandlers={{
                     add: (e) => {
-                    console.log("Added Layer:", e.target);
+                    //console.log("Added Layer:", e.target);
                     },
                     remove: (e) => {
-                    console.log("Removed layer:", e.target);
+                    //console.log("Removed layer:", e.target);
                     }
                 }}
                 />
@@ -371,7 +370,7 @@ function Evselector() {
             </LayersControl>
             <MapConsumer>
                 {(map) => {
-                    console.log('map center:', map.getCenter())
+                    //console.log('map center:', map.getCenter())
                     //==================================================================================================map start
                     var TXRlegend = L.control({position: "bottomleft"});
                     TXRlegend.onAdd = function(map) {
