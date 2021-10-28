@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, LayersControl, FeatureGroup,GeoJSON } from 'react-leaflet';
 import {features} from "../../data/GBLayer.json";
-import VehicleData from "../../data/vehicleTypeJSON.json"
+//import VehicleData from "../../data/vehicleTypeJSON.json"
 import {  iconEV  } from '../markers/Marker.js';
 
 function mergeJson(json1, json2, primaryKey, foreignKey){
@@ -35,7 +35,37 @@ function getColour(d) {
 }
 
 function NumCars() {
-    var jsonsMerged = mergeJson(features, VehicleData, "LAD13CD", "ONSCode");
+   
+    const [VTdata,VTsetData] = useState();
+
+    var VThold;
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/VehicleType")
+        .then(response => response.json())
+        .then(res => {
+            VThold = res;
+            loadData2();           
+        });
+    }
+    const loadData2 = async () =>{
+        const x = await fetch("https://cleanstreetserver.herokuapp.com/v1/GBLayer")
+        .then(resp=> resp.json())
+        .then(data => {
+            var dFeatures = data.features;
+
+            var jsonsMerged = mergeJson(dFeatures, VThold, "LAD13CD", "ONSCode"); 
+
+            const feature = jsonsMerged.map(feature=>{
+                return(feature);
+            });
+            VTsetData(feature);
+        })
+    }
+    
+
+    useEffect(() => {
+        loadData();
+    }, []);
 
     const style = (feature => {
         return ({
@@ -48,15 +78,12 @@ function NumCars() {
         });
     });
 
-    const feature = jsonsMerged.map(feature=>{
-        return(feature);
-    });
-
+  
     return(
         <LayersControl.Overlay name="Car Count P/region">
         <FeatureGroup name="Marker with popup">
-            {feature && (
-                <GeoJSON data={feature} 
+            {VTdata && (
+                <GeoJSON data={VTdata} 
                     style={style} 
                 />
             )}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, LayersControl, FeatureGroup } from 'react-leaflet';
 import tc1 from "../../data/TCP1.json";
 //import tc2 from "../../data/TCP2.json";

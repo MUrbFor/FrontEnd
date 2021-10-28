@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, LayersControl, FeatureGroup,GeoJSON } from 'react-leaflet';
 import {features} from "../../data/GBLayer.json";
 import pop from "../../data/cityPopEV.json"
@@ -23,9 +23,49 @@ function mergeJson(json1, json2, primaryKey, foreignKey){
     return merged;
 }
 
-var jsonsMerged = mergeJson(features, pop, "LAD13NM", "CityName"); 
-
 function CurBEV() {
+    //const [ value, setValue ] = useState([]); 
+    const [LAdata,LAsetData] = useState();
+    // const [ feat, setfeat ] = useState([]); 
+    // const [ merged, setMerged ] = useState([]); 
+
+    var hold;
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop")
+        .then(response => response.json())
+        .then(res => {
+            
+            //setValue(res);
+            //console.log(value);
+            //console.log(res);
+            hold = res;
+            loadData2();
+            
+        });
+        
+
+        
+    }
+    const loadData2 = async () =>{
+        const x = await fetch("https://cleanstreetserver.herokuapp.com/v1/GBLayer")
+        .then(resp=> resp.json())
+        .then(data => {
+            var dFeatures = data.features;
+
+            var jsonsMerged = mergeJson(dFeatures, hold, "LAD13NM", "CityName"); 
+            //console.log(jsonsMerged);
+            const feature = jsonsMerged.map(feature=>{
+                return(feature);
+            });
+            LAsetData(feature);
+        })
+    }
+    
+
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 1000 ? '#800026' :
             d > 800  ? '#BD0026' :
@@ -36,7 +76,7 @@ function CurBEV() {
             d > 100   ? '#FED976' :
                         '#FFEDA0';
     }
-
+    
     const style = (feature => {
         return ({
             fillColor: getColour(feature.CurBEV),
@@ -47,27 +87,41 @@ function CurBEV() {
             fillOpacity: 0.5
         });
     });
+    
+    
 
-    const feature = jsonsMerged.map(feature=>{
-        return(feature);
-    });
-
+    
     return(
         <LayersControl.Overlay name="Current BEV">
         <FeatureGroup name="Marker with popup">
-            {feature && (
-                <GeoJSON data={feature} 
+            {LAdata && (
+                <GeoJSON data={LAdata} 
                     style={style} 
                 />
             )}
         </FeatureGroup>
         </LayersControl.Overlay>
-    );
+    );        
+        
+            
+       
+    
 }
 
 
 
 function CurULEV() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
     function getColour(d) {
         return d > 1000 ? '#800026' :
             d > 800  ? '#BD0026' :
@@ -89,6 +143,9 @@ function CurULEV() {
             fillOpacity: 0.5
         });
     });
+    //console.log(features);
+    //features
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
@@ -110,6 +167,18 @@ function CurULEV() {
 
 
 function Population() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 500000 ? '#800026' :
             d > 400000  ? '#BD0026' :
@@ -132,6 +201,7 @@ function Population() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
@@ -150,6 +220,18 @@ function Population() {
 }
 
 function PrivULEV() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 1000 ? '#800026' :
             d > 800  ? '#BD0026' :
@@ -172,9 +254,11 @@ function PrivULEV() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
+    
 
     return(
         <LayersControl.Overlay name="PrivULEV">
@@ -190,6 +274,18 @@ function PrivULEV() {
 }
 
 function CommercialULEV() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 1000 ? '#800026' :
             d > 800  ? '#BD0026' :
@@ -212,6 +308,7 @@ function CommercialULEV() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
@@ -230,6 +327,18 @@ function CommercialULEV() {
 }
 
 function CurULEVPercent() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 1 ? '#800026' :
             d > 0.800  ? '#BD0026' :
@@ -252,6 +361,7 @@ function CurULEVPercent() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
@@ -270,6 +380,18 @@ function CurULEVPercent() {
 }
 
 function ResidentialProperties() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 100000 ? '#800026' :
             d > 80000  ? '#BD0026' :
@@ -292,6 +414,7 @@ function ResidentialProperties() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
@@ -309,7 +432,19 @@ function ResidentialProperties() {
     );
 }
 
-function percentPropertiesTenements() {
+function PercentPropertiesTenements() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 1 ? '#800026' :
             d > 0.800  ? '#BD0026' :
@@ -332,6 +467,7 @@ function percentPropertiesTenements() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
@@ -350,6 +486,18 @@ function percentPropertiesTenements() {
 }
 
 function TotalULEVs2045() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 100000 ? '#800026' :
             d > 80000  ? '#BD0026' :
@@ -372,6 +520,7 @@ function TotalULEVs2045() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
@@ -390,6 +539,18 @@ function TotalULEVs2045() {
 }
 
 function TotalBEVs2045() {
+    const [ value, setValue ] = useState([]); 
+
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/cityPop");
+        const json = await data.json();
+        
+        setValue(json);
+    }
+    useEffect(() => {
+        loadData();
+    }, []);
+
     function getColour(d) {
         return d > 100000 ? '#800026' :
             d > 80000  ? '#BD0026' :
@@ -412,6 +573,7 @@ function TotalBEVs2045() {
         });
     });
 
+    var jsonsMerged = mergeJson(features, value, "LAD13NM", "CityName"); 
     const feature = jsonsMerged.map(feature=>{
         return(feature);
     });
@@ -431,5 +593,5 @@ function TotalBEVs2045() {
 
 
 
-export {CurULEV, Population,PrivULEV, CommercialULEV ,CurULEVPercent , ResidentialProperties, percentPropertiesTenements,TotalULEVs2045 ,TotalBEVs2045};
+export {CurULEV, Population,PrivULEV, CommercialULEV ,CurULEVPercent , ResidentialProperties, PercentPropertiesTenements,TotalULEVs2045 ,TotalBEVs2045};
 export default CurBEV;

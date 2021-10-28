@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useMap,MapContainer, TileLayer, Marker, Popup, LayersControl, FeatureGroup,GeoJSON } from 'react-leaflet';
 import {features} from "../../data/GBLayer.json";
-import BadgeData from "../../data/BlueBadge.json"
+//import BadgeData from "../../data/BlueBadge.json"
 import {  iconEV  } from '../markers/Marker.js';
 import L from 'leaflet';
 
@@ -36,46 +36,22 @@ function getColour(d) {
 }
 
 function BlueBadgeLayer(props) {
+    const [BBdata,BBTsetData] = useState([]);
 
-    // const map = useMap()
-    // var legend = L.control({position: "bottomleft"});
-    // legend.onAdd = function(map) {
-    //     var div = L.DomUtil.create("div", "legend"); 
-    //     div.innerHTML += "<h4>Registered Blue Badges</h4>";
-    //     div.innerHTML += '<i style="background: #FFEDA0"></i><span>0 - 1,000</span><br>';  
-    //     div.innerHTML += '<i style="background: #FED976"></i><span>1,000 - 3,000</span><br>';
-    //     div.innerHTML += '<i style="background: #FEB24C"></i><span>3,000 - 7,000</span><br>';  
-    //     div.innerHTML += '<i style="background: #FD8D3C"></i><span>7,000 - 11,000</span><br>';                           
-    //     div.innerHTML += '<i style="background: #FC4E2A"></i><span>11,000 - 15,000</span><br>';  
-    //     div.innerHTML += '<i style="background: #E31A1C"></i><span>15,000 - 19,000</span><br>';  
-    //     div.innerHTML += '<i style="background: #BD0026"></i><span>19,000 - 21,000</span><br>';  
-    //     div.innerHTML += '<i style="background: #800026"></i><span>21,000+</span><br>';  
+    useEffect(()=> {
+        loadData();
+        //getData();
 
-    //     return div;
-    // };
+    }, []);
+
+    const loadData = async () =>{
+        await fetch("https://cleanstreetserver.herokuapp.com/v1/blueBadge")
+        .then(response => response.json())
+        .then(data => BBTsetData(data))
+    }
+    var BadgeData = BBdata;
+
     var layName = "Blue Badge Data";
-    // map.on("overlayadd", function(e){
-    //     if (e.name == layName){
-    //         console.log("Blue Badge Data ADDED")
-    //         if (props.legeState.lenth>0){
-    //             map.removeControl(props.legeState[0]);
-    //             //props.handleLedgeChange([legend]);
-    //         }
-
-    //         if (!map.hasLayer(legend)){
-    //             legend.addTo(map);
-    //             props.handleLedgeChange([legend]);
-    //         }
-            
-    //     }
-    // })
-
-    // map.on("overlayremove", function(e){
-    //     if (!map.hasLayer(e)){
-    //         map.removeControl(legend)
-    //     }
-    // })
-
 
     var jsonsMerged = mergeJson(features, BadgeData, "LAD13CD", "ONSCode");   
 

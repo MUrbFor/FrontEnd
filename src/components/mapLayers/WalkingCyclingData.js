@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { useMap, MapContainer, TileLayer, Marker, Popup, LayersControl, FeatureGroup, GeoJSON } from 'react-leaflet';
 import {features} from "../../data/GBLayer.json";
-import WCData from "../../data/walkingCyclingData.json"
+//import WCData from "../../data/walkingCyclingData.json"
 import {  iconEV  } from '../markers/Marker.js';
 import L from 'leaflet';
 
@@ -37,51 +37,39 @@ function getColour(d) {
 }
 
 function WalkCycle(props) {
-    // const map = useMap()
-    // var legend = L.control({position: "bottomleft"});
-    // legend.onAdd = function(map) {
-    //     var div = L.DomUtil.create("div", "legend"); 
-    //     div.innerHTML += "<h4>Walking/Cycling Activity P/Week</h4>";
-    //     div.innerHTML += '<i style="background: #FFEDA0"></i><span>0 - 10</span><br>';  
-    //     div.innerHTML += '<i style="background: #FED976"></i><span>10 - 20</span><br>';
-    //     div.innerHTML += '<i style="background: #FEB24C"></i><span>20 - 30</span><br>';  
-    //     div.innerHTML += '<i style="background: #FD8D3C"></i><span>30 - 40/span><br>';                           
-    //     div.innerHTML += '<i style="background: #FC4E2A"></i><span>40 - 45</span><br>';  
-    //     div.innerHTML += '<i style="background: #E31A1C"></i><span>45 - 50</span><br>';  
-    //     div.innerHTML += '<i style="background: #BD0026"></i><span>50 - 60</span><br>'; 
-    //     div.innerHTML += '<i style="background: #800026"></i><span>60+</span><br>';  
-
-    //     return div;
-    // };
     var layName = "Walking and Cyling Data";
-    // map.on("overlayadd", function(e){
-    //     if (e.name == layName){
-    //         console.log("WC Data ADDED")
-    //         if (props.legeState.lenth>0){
-    //             map.removeControl(props.legeState[0]);
-    //             //props.handleLedgeChange([legend]);
-    //         }
 
-    //         if (!map.hasLayer(legend)){
-    //             legend.addTo(map);
-    //             props.handleLedgeChange([legend]);
-    //         }
-    //     }
-    // })
+    const [WCdata,WCsetData] = useState();
 
-    // map.on("overlayremove", function(){
-    //     if (map.hasLayer(legend)){
-    //         map.removeControl(legend)
-    //     }
-    // })
-    var jsonsMerged = mergeJson(features, WCData, "LAD13CD", "geographyCode");
-   
+    var hold;
+    const loadData = async () => {
+        const data = await fetch ("https://cleanstreetserver.herokuapp.com/v1/walkingCyclingData")
+        .then(response => response.json())
+        .then(res => {
+            hold = res;
+            loadData2();           
+        });
+    }
+    const loadData2 = async () =>{
+        const x = await fetch("https://cleanstreetserver.herokuapp.com/v1/GBLayer")
+        .then(resp=> resp.json())
+        .then(data => {
+            var dFeatures = data.features;
 
+            var jsonsMerged = mergeJson(dFeatures, hold, "LAD13CD", "geographyCode"); 
+
+            const feature = jsonsMerged.map(feature=>{
+                return(feature);
+            });
+            WCsetData(feature);
+        })
+    }
     
 
+    useEffect(() => {
+        loadData();
+    }, []);
 
-
-    
 
     const style = (feature => {
         return ({
@@ -94,15 +82,11 @@ function WalkCycle(props) {
         });
     });
 
-    const feature = jsonsMerged.map(feature=>{
-        return(feature);
-    });
-
     return(
         <LayersControl.Overlay name={layName}>
         <FeatureGroup name="Marker with popup">
-            {feature && (
-                <GeoJSON data={feature} 
+            {WCdata && (
+                <GeoJSON data={WCdata} 
                     style={style} 
                 />
             )}

@@ -36,10 +36,30 @@ import VehicleType from '../components/mapLayers/VehicleType.js';
 import NumCars  from '../components/mapLayers/numCarsLA';
 import EnergyConsumptionLayer from "../components/mapLayers/EnergyCon.js";
 import DundeeStations from "../components/mapLayers/dundeeStations.js";
-import CurBEV, {CurULEV,Population, PrivULEV, CommercialULEV,CurULEVPercent,ResidentialProperties,percentPropertiesTenements,TotalULEVs2045,TotalBEVs2045} from '../components/mapLayers/cityPopExports.js';
+import HouseholdActivityLayer from '../components/mapLayers/HouseholdActivity'; 
+import CurBEV, { CurULEV,Population, PrivULEV, CommercialULEV,CurULEVPercent,ResidentialProperties,PercentPropertiesTenements,TotalULEVs2045,TotalBEVs2045} from '../components/mapLayers/cityPopExports.js';
+//import CurBEV from '../components/mapLayers/cityPopExports.js';
 
+import {features} from "../data/GBLayer.json";
 
-
+function mergeJson(json1, json2, primaryKey, foreignKey){
+    const merged = [];
+    json1.forEach(obj1 =>
+        {
+            var obj1MergedBool = false;
+            json2.some(obj2 => {
+                if (obj1.properties[primaryKey] == obj2[foreignKey]){
+                    merged.push(Object.assign(obj1, obj2));
+                    obj1MergedBool = true;
+                }
+            })
+            if (obj1MergedBool == false){
+                merged.push(obj1);
+            }
+        }
+    )
+    return merged;
+}
 
 function Evselector() {
     const [legeState, setLegeState] = React.useState([]);
@@ -51,6 +71,8 @@ function Evselector() {
     //=========================================================================
     const [selectedLA, setselectedLA ] = useState(); 
     const [map, setMap] = useState(null);
+
+
     
     //search autocomplete
     //===========================================================================
@@ -69,6 +91,7 @@ function Evselector() {
 
     }
     //console.log(items);
+    //console.log(items);
       const handleOnSearch = (string, results) => {
         // onSearch will have as the first callback parameter
         // the string searched and for the second the results.
@@ -86,7 +109,43 @@ function Evselector() {
         .then(res => {               
             // const all_addresses = res.data;
             var results = res.data;
-            map.flyTo([results[0].lat, results[0].lon], 14);
+            map.flyTo([results[0].lat, results[0].lon], 11);
+
+            //load GBLayer
+            
+
+            console.log(item.name);
+            console.log(features);
+            
+            function getColour(d) {
+                return item.name == d ? '#F2f2f2' :
+                                        '#606060' ;
+            }
+            
+            function getFillOpacity(d){
+                return item.name == d ? 0.15 :
+                                        0.75 ;
+            }
+
+            const style = (feature => {
+                return ({
+                    fillColor: getColour(feature.properties.LAD13NM),
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: getFillOpacity(feature.properties.LAD13NM),
+                    color: 'black',
+                    
+                });
+            });
+
+            const feature = features.map(feature=>{
+                return(feature);
+            });
+            
+            var geojson = L.geoJson(feature, {style: style});
+            geojson.addTo(map);
+
+
             // var LAcenter = [results[0].lat, results[0].lon];
             // setgeocodedLA(LAcenter);
             // setTheArray(address => [...address, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", address: all_addresses.display_name}]);
@@ -113,6 +172,7 @@ function Evselector() {
 
     const _onCreate = e => {
         //console.log(e);
+        //console.log(e);
         const {layerType, layer} = e;
         if(layerType === "polygon"){
             const{_leaflet_id} = layer;
@@ -133,6 +193,7 @@ function Evselector() {
             //===================================================================================
             var targetPoint = point([layer._latlng.lat, layer._latlng.lng]);
             var nearest = nearestPoint(targetPoint, points);
+            console.log(nearest);
             console.log(nearest);
             setMapLayers(layers => [...layers, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", area: 0},]);
 
@@ -157,6 +218,7 @@ function Evselector() {
         var to = point([theArray[1].latLngs.lat, theArray[1].latLngs.lng]);
         var options = {units: 'miles'};
         var distanceed = distance(from, to, options);
+        console.log(distanceed);
         console.log(distanceed);
     }
 
@@ -321,8 +383,10 @@ function Evselector() {
                 eventHandlers={{
                     add: (e) => {
                     //console.log("Added Layer:", e.target);
+                    //console.log("Added Layer:", e.target);
                     },
                     remove: (e) => {
+                    //console.log("Removed layer:", e.target);
                     //console.log("Removed layer:", e.target);
                     }
                 }}
@@ -331,6 +395,11 @@ function Evselector() {
                 <FeatureGroup>
                     <EditControl position="topleft" onCreated={_onCreate} onEdited={_onEdited} onDeleted={_onDeleted} draw={{rectangle: false, polyline:false, circle: false, circlemarker: false, marker: true}}/>
                 </FeatureGroup>
+
+                <LayerGroup>
+                    <HouseholdActivityLayer/>
+                </LayerGroup>
+                HouseholdActivityLayer
                 <LayerGroup name="nodes">
                     <METLayer />
                     <TXRLayer legeState={legeState} handleLedgeChange = {handleLedgeChange} dogs="props Passed"/>
@@ -350,16 +419,19 @@ function Evselector() {
                 </LayerGroup>
                 <LayerGroup name="others">
                     <DurhamCarParks/>
+                    
+                    <CurBEV />
                     <Population/>
-                    <CurBEV/>
+                   
                     <CurULEV/>
                     <PrivULEV/>
                     <CommercialULEV/>
                     <CurULEVPercent/>
-                    <ResidentialProperties/>
-                    <percentPropertiesTenements/>
                     <TotalULEVs2045/>
                     <TotalBEVs2045/>
+                    <ResidentialProperties/>
+                    <PercentPropertiesTenements/>
+                    
 
 
                     {/* <DundeeStations/> */}
@@ -370,6 +442,7 @@ function Evselector() {
             </LayersControl>
             <MapConsumer>
                 {(map) => {
+                    //console.log('map center:', map.getCenter())
                     //console.log('map center:', map.getCenter())
                     //==================================================================================================map start
                     var TXRlegend = L.control({position: "bottomleft"});
@@ -505,7 +578,9 @@ function Evselector() {
                     var layName = "TXR"
                     if (!value0){
                         console.log('Fired!');
+                        console.log('Fired!');
                         map.on("overlayadd", function(e){
+                            console.log("trigger");
                             console.log("trigger");
                             if (curLegend != ""){
                                 //if theres already a legend remove the last added one
@@ -515,45 +590,56 @@ function Evselector() {
                     
                             if (e.name == "TXR"){
                                 console.log("TXR ADDED");
+                                console.log("TXR ADDED");
                                 addedLayers[e.name] = [e,TXRlegend];
                                 TXRlegend.addTo(map);
                                 curLegend = TXRlegend;
+                                //console.log(TXRlegend);
                                 //console.log(TXRlegend);
                             }
                     
                             if (e.name == "Walking and Cyling Data"){
                                 console.log("Walking and Cyling Data");
+                                console.log("Walking and Cyling Data");
                                 addedLayers[e.name] = [e,WClegend];
                                 WClegend.addTo(map);
                                 curLegend = WClegend;
+                                //console.log(TXRlegend);
                                 //console.log(TXRlegend);
                             }
                     
                             if (e.name == "Motorcyle Count P/region"){
                                 console.log("Motorcyle Count P/region");
+                                console.log("Motorcyle Count P/region");
                                 addedLayers[e.name] = [e,MClegend];
                                 MClegend.addTo(map);
                                 curLegend = MClegend;
+                                //console.log(TXRlegend);
                                 //console.log(TXRlegend);
                             }
                     
                             if (e.name == "Car Count P/region"){
                                 console.log("Car Count P/region");
+                                console.log("Car Count P/region");
                                 addedLayers[e.name] = [e,Carlegend];
                                 Carlegend.addTo(map);
                                 curLegend = Carlegend;
+                                //console.log(TXRlegend);
                                 //console.log(TXRlegend);
                             }
                     
                             if (e.name == "RSE"){
                                 console.log("RSE");
+                                console.log("RSE");
                                 addedLayers[e.name] = [e,RSElegend];
                                 RSElegend.addTo(map);
                                 curLegend = RSElegend;
                                 //console.log(TXRlegend);
+                                //console.log(TXRlegend);
                             }
                     
                             if (e.name == "Population"){
+                                console.log("Population");
                                 console.log("Population");
                                 addedLayers[e.name] = [e,Poplegend];
                                 Poplegend.addTo(map);
@@ -562,12 +648,14 @@ function Evselector() {
                     
                             if (e.name == "PLT"){
                                 console.log("PLT");
+                                console.log("PLT");
                                 addedLayers[e.name] = [e,PLTlegend];
                                 PLTlegend.addTo(map);
                                 curLegend = PLTlegend;
                             }
                     
                             if (e.name == "MET"){
+                                console.log("MET");
                                 console.log("MET");
                                 addedLayers[e.name] = [e,METlegend];
                                 METlegend.addTo(map);
@@ -576,12 +664,14 @@ function Evselector() {
                     
                             if (e.name == "FTD"){
                                 console.log("FTD");
+                                console.log("FTD");
                                 addedLayers[e.name] = [e,FTDlegend];
                                 FTDlegend.addTo(map);
                                 curLegend = FTDlegend;
                             }
                     
                             if (e.name == "BCT"){
+                                console.log("BCT");
                                 console.log("BCT");
                                 addedLayers[e.name] = [e,BCTlegend];
                                 BCTlegend.addTo(map);
@@ -590,24 +680,31 @@ function Evselector() {
                     
                             if (e.name == "AIR"){
                                 console.log("AIR");
+                                console.log("AIR");
                                 addedLayers[e.name] = [e,AIRlegend];
                                 AIRlegend.addTo(map);
                                 curLegend = AIRlegend;
                             }
 
                             console.log(Object.keys(addedLayers).length);
+                            console.log(Object.keys(addedLayers).length);
                         })
                     
                         map.on("overlayremove", function(e){
                             console.log(Object.keys(addedLayers).length);
+                            console.log(Object.keys(addedLayers).length);
+                            //console.log(e.name);
                             //console.log(e.name);
                             //console.log(curLegend);
+                            //console.log(curLegend);
                             if (curLegend != ""){
+                                console.log(curLegend);
                                 console.log(curLegend);
                                 //if theres already a legend remove the last added one
                                 map.removeControl(curLegend);
                                 curLegend = "";
                             }
+                            console.log(addedLayers);
                             console.log(addedLayers);
                             var addedLayersKeys = Object.keys(addedLayers);
                             addedLayersKeys.forEach(key => {
@@ -616,12 +713,15 @@ function Evselector() {
                                 }
                             })
                             console.log(Object.keys(addedLayers).length);
+                            console.log(Object.keys(addedLayers).length);
+                            console.log(addedLayers);
                             console.log(addedLayers);
                             if (Object.keys(addedLayers).length != 0){
                                 var lastAdd = addedLayersKeys.at(-1);
                                 addedLayers[lastAdd][1].addTo(map);
                                 curLegend = addedLayers[lastAdd][1];
                             }
+                            console.log(Object.keys(addedLayers).length);
                             console.log(Object.keys(addedLayers).length);
                         })
                         setValue0(true);

@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, LayersControl, FeatureGroup } from 'react-leaflet';
 import {  iconEV  } from '../markers/Marker.js';
 
 function DundeeStations() {
+    const [Dundeedata,DundeesetData] = useState([]);
+    useEffect(()=> {
+        loadData();
+    }, []);
+    
+    const loadData = async () =>{
+        await fetch("https://gbfs.rideondundee.com/gbfs.json")
+        .then(response => response.json())
+        .then(data => DundeesetData(data))
+    }
     
     //fetch dundee station data as stations
     //fetch dundee station status data as stationStatus
@@ -26,15 +36,7 @@ function DundeeStations() {
     //     stationTemp.push(stationId, stationName, stationAddress, stationLat, stationLon, stationReturning, lastReported, numBikes, numDock);
     //     stationList.push(stationTemp);
     // }
-    // const indexed = stationList.map((item, id) => Object.assign(item, {id}));
-    fetch("https://gbfs.rideondundee.com/gbfs.json")
-        .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-      });
-
+    // const indexed = stationList.map((item, id) => Object.assign(item, {id}));  
     return(
         <LayersControl.Overlay name="Dundee Stations">
         {/* <FeatureGroup name="Marker with popup">
