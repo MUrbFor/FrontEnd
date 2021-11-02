@@ -17,7 +17,6 @@ import { ReactSearchAutocomplete } from 'react-search-autocomplete';
 import data from '../data/GBLayer';
 //import MapFunctions from "../components/functions/MapFunctions";
 
-
 //mapLayers
 import stops from "../data/Stops.json";
 import METLayer from "../components/mapLayers/MET.js";
@@ -62,6 +61,8 @@ function mergeJson(json1, json2, primaryKey, foreignKey){
 }
 
 function Evselector() {
+    var layerGroup = L.featureGroup();
+    var LASelectLayer;
     const [legeState, setLegeState] = React.useState([]);
     const handleLedgeChange = (e) => {
         setLegeState(e);
@@ -69,7 +70,7 @@ function Evselector() {
 
     //all states 
     //=========================================================================
-    const [selectedLA, setselectedLA ] = useState(); 
+    //const [selectedLA, setselectedLA ] = useState(); 
     const [map, setMap] = useState(null);
 
 
@@ -92,42 +93,243 @@ function Evselector() {
     }
     //console.log(items);
     //console.log(items);
-      const handleOnSearch = (string, results) => {
-        // onSearch will have as the first callback parameter
-        // the string searched and for the second the results.
-      }
+    const handleOnSearch = (string, results) => {
+    // onSearch will have as the first callback parameter
+    // the string searched and for the second the results.
+    }
+
+    const handleOnHover = (result) => {
+    // the item hovered
+    }
+    var searchArr = ["null", "null", "null", "null", "", ""];
+    // const [searchValue1, setSearchValue1] = useState("null");
+    // const [searchValue2, setSearchValue2] = useState("null");
+    // const [searchValue3, setSearchValue3] = useState("null");
+    // const [searchValue4, setSearchValue4] = useState("null");
+    const [v1, setv1] = useState(null);
+    const handleOnSelect1 = (item) => {
+        //setSearchValue1(item.name);
+        searchArr[0] = item.name;
+        if (searchArr[4] == "first"){
+            searchArr[5] = "multiple";
+        }
+        if (searchArr[4] == ""){
+            searchArr[4] = "first";
+        }
+        processSearch(map);
+
+    }
+
+    const handleOnSelect2 = (item) => {
+        //setSearchValue2(item.name);
+        searchArr[1] = item.name;
+        if (searchArr[4] == "first"){
+            searchArr[5] = "multiple";
+        }
+        if (searchArr[4] == ""){
+            searchArr[4] = "first";
+        }
+        //setSearchArrr(searchArr);
+        processSearch(map);
+    }
     
-      const handleOnHover = (result) => {
-        // the item hovered
-      }
+    const handleOnSelect3 = (item) => {
+        //setSearchValue3(item.name);
+        searchArr[2] = item.name;
+        if (searchArr[4] == "first"){
+            searchArr[5] = "multiple";
+        }
+        if (searchArr[4] == ""){
+            searchArr[4] = "first";
+        }
+        //setSearchArrr(searchArr);
+        processSearch(map);
+    }
     
-      const handleOnSelect = (item) => {
-        // the item selected
-        setselectedLA(item.name);
+    const handleOnSelect4 = (item) => {
+        //setSearchValue4(item.name);
+        searchArr[3] = item.name;
+        if (searchArr[4] == "first"){
+            searchArr[5] = "multiple";
+        }
+        if (searchArr[4] == ""){
+            searchArr[4] = "first";
+        }
+        console.log("search V 4 set:" + item.name);
+        //setSearchArrr(searchArr);
+        processSearch(map);
+    }
+    function clearLays(){
+        layerGroup.clearLayers();
+    }
+    
 
-        axios.get(`https://nominatim.openstreetmap.org/?format=json&city=${item.name}`)
-        .then(res => {               
-            // const all_addresses = res.data;
-            var results = res.data;
-            map.flyTo([results[0].lat, results[0].lon], 11);
+    function processSearch(map){
+        var move = true;
+        map.once("overlayadd", function(e){
+            move = false;
+            layerGroup.clearLayers();
+            console.log("searchArr len" +searchArr.length );
+            console.log("search V 1" +searchArr[0]);
+            console.log("search V 2" +searchArr[1]);
+            console.log("search V 3" +searchArr[2]);
+            console.log("search V 4" +searchArr[3]);
+            if (searchArr[5] == "multiple"){
+                console.log("MULTIPLE LA's 2 Search")
+                //fly to whole uk with low zoom lvl
+                if (move == true){
+                    map.flyTo([54.059388, -3.793332], 6);
+                }
+                
+                function getColour(d) {
+                    var toRe = '#606060';
+                    searchArr.forEach(selLA => {
+                        //console.log(selLA);
+                        //console.log("d:"+d);
+                        //if (selLA != "null"){
+                            if(selLA == d){
+                                //console.log("highlight");
+                                toRe = '#F2f2f2';
+                            }
+                        //}
+                    })
+                    return toRe;
+                }
 
-            //load GBLayer
-            
+                function getFillOpacity(d){
+                    var toRe = 1;
+                    searchArr.forEach(selLA => {
+                        //if (selLA != "null"){
+                            if(selLA == d){
+                                toRe = 0.05;
+                            }
+                        //}
+                    })
+                    return toRe ;
+                }
 
-            console.log(item.name);
-            console.log(features);
+                const stylee = (feature => {
+                    return ({
+                        fillColor: getColour(feature.properties.LAD13NM),
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: getFillOpacity(feature.properties.LAD13NM),
+                        color: 'black',
+                        
+                    });
+                });
+
+                const feature = features.map(feature=>{
+                    return(feature);
+                });
+
+                //var geoJSON = L.geoJson(feature, {style: style});
+                //geoJSON.addTo(layerGroup);
+                //geoJSON.addTo(map);
+                var nGeo = L.geoJson(feature, {style: stylee}).addTo(layerGroup);
+                LASelectLayer = nGeo;
+
+
+            }
+            else {
+                var searchMe;
+                searchArr.forEach(toSearch =>{
+                    if (toSearch != "null" && toSearch != "" && toSearch != "first"){
+                        searchMe = toSearch;
+                    }
+                })
+                axios.get(`https://nominatim.openstreetmap.org/?format=json&city=${searchMe}`)
+                .then(res => {               
+                    // const all_addresses = res.data;
+                    var results = res.data;
+                    if (move == true){
+                        map.flyTo([results[0].lat, results[0].lon], 11);
+                    }
+                    
+        
+                    //load GBLayer
+                    console.log(searchMe);
+                    console.log(features);
+                    
+                    function getColour(d) {
+                        return searchMe == d ? '#F2f2f2' :
+                                                '#606060' ;
+                    }
+                    
+                    function getFillOpacity(d){
+                        return searchMe == d ? 0.05 :
+                                                0.9 ;
+                    }
+        
+                    const style = (feature => {
+                        return ({
+                            fillColor: getColour(feature.properties.LAD13NM),
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: getFillOpacity(feature.properties.LAD13NM),
+                            color: 'black',
+                            
+                        });
+                    });
+        
+                    const feature = features.map(feature=>{
+                        return(feature);
+                    });
+                    
+                    var geoJSON = L.geoJson(feature, {style: style});
+                    geoJSON.addTo(layerGroup);
+                    LASelectLayer = geoJSON;
+        
+        
+                    // var LAcenter = [results[0].lat, results[0].lon];
+                    // setgeocodedLA(LAcenter);
+                    // setTheArray(address => [...address, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", address: all_addresses.display_name}]);
+                }); 
+            }
+            //processSearch(map);
+
+        })
+        layerGroup.clearLayers();
+        console.log("searchArr len" +searchArr.length );
+        console.log("search V 1" +searchArr[0]);
+        console.log("search V 2" +searchArr[1]);
+        console.log("search V 3" +searchArr[2]);
+        console.log("search V 4" +searchArr[3]);
+        if (searchArr[5] == "multiple"){
+            console.log("MULTIPLE LA's 2 Search")
+            //fly to whole uk with low zoom lvl
+            if (move == true){
+                map.flyTo([54.059388, -3.793332], 6);
+            }
             
             function getColour(d) {
-                return item.name == d ? '#F2f2f2' :
-                                        '#606060' ;
-            }
-            
-            function getFillOpacity(d){
-                return item.name == d ? 0.15 :
-                                        0.75 ;
+                var toRe = '#606060';
+                searchArr.forEach(selLA => {
+                    //console.log(selLA);
+                    //console.log("d:"+d);
+                    //if (selLA != "null"){
+                        if(selLA == d){
+                            //console.log("highlight");
+                            toRe = '#F2f2f2';
+                        }
+                    //}
+                })
+                return toRe;
             }
 
-            const style = (feature => {
+            function getFillOpacity(d){
+                var toRe = 1;
+                searchArr.forEach(selLA => {
+                    //if (selLA != "null"){
+                        if(selLA == d){
+                            toRe = 0.05;
+                        }
+                    //}
+                })
+                return toRe ;
+            }
+
+            const stylee = (feature => {
                 return ({
                     fillColor: getColour(feature.properties.LAD13NM),
                     weight: 1,
@@ -141,16 +343,72 @@ function Evselector() {
             const feature = features.map(feature=>{
                 return(feature);
             });
-            
-            var geojson = L.geoJson(feature, {style: style});
-            geojson.addTo(map);
+
+            //var geoJSON = L.geoJson(feature, {style: style});
+            //geoJSON.addTo(layerGroup);
+            //geoJSON.addTo(map);
+            var nGeo = L.geoJson(feature, {style: stylee}).addTo(layerGroup);
+            LASelectLayer = nGeo;
 
 
-            // var LAcenter = [results[0].lat, results[0].lon];
-            // setgeocodedLA(LAcenter);
-            // setTheArray(address => [...address, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", address: all_addresses.display_name}]);
-        }); 
-      }
+        }
+        else {
+            var searchMe;
+            searchArr.forEach(toSearch =>{
+                if (toSearch != "null" && toSearch != "" && toSearch != "first"){
+                    searchMe = toSearch;
+                }
+            })
+            axios.get(`https://nominatim.openstreetmap.org/?format=json&city=${searchMe}`)
+            .then(res => {               
+                // const all_addresses = res.data;
+                var results = res.data;
+                if (move == true){
+                    map.flyTo([results[0].lat, results[0].lon], 11);
+                }
+                
+    
+                //load GBLayer
+                console.log(searchMe);
+                console.log(features);
+                
+                function getColour(d) {
+                    return searchMe == d ? '#F2f2f2' :
+                                            '#606060' ;
+                }
+                
+                function getFillOpacity(d){
+                    return searchMe == d ? 0.05 :
+                                            0.9 ;
+                }
+    
+                const style = (feature => {
+                    return ({
+                        fillColor: getColour(feature.properties.LAD13NM),
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: getFillOpacity(feature.properties.LAD13NM),
+                        color: 'black',
+                        
+                    });
+                });
+    
+                const feature = features.map(feature=>{
+                    return(feature);
+                });
+                
+                var geoJSON = L.geoJson(feature, {style: style});
+                geoJSON.addTo(layerGroup);
+                LASelectLayer = geoJSON;
+    
+    
+                // var LAcenter = [results[0].lat, results[0].lon];
+                // setgeocodedLA(LAcenter);
+                // setTheArray(address => [...address, {id: _leaflet_id, latLngs: layer._latlng, type:"Fast Charger", address: all_addresses.display_name}]);
+            }); 
+        }
+    }
+
       const handleOnFocus = () => {
       }
       const formatResult = (item) => {
@@ -245,9 +503,6 @@ function Evselector() {
         );
         setCheckedState(updatedCheckedState);
     };
-
-    //nearest
-
     
     return(
       <Layout>
@@ -262,15 +517,58 @@ function Evselector() {
         <section>
             <h2 className="left">Where?</h2>
             <div style={{ width: 400 }}>
-            <ReactSearchAutocomplete
-                items={items}
-                onSearch={handleOnSearch}
-                onHover={handleOnHover}
-                onSelect={handleOnSelect}
-                onFocus={handleOnFocus}
-                autoFocus
-                formatResult={formatResult}
-            />
+                <div style={{ display: 'inline-block', width: 400 }}>
+                    <ReactSearchAutocomplete
+                        items={items}
+                        onSearch={handleOnSearch}
+                        onHover={handleOnHover}
+                        onSelect={handleOnSelect1}
+                        onFocus={handleOnFocus}
+                        autoFocus
+                        formatResult={formatResult}
+                        placeholder="Enter a local authority"
+                    />
+                </div>
+                <div style={{ display: 'inline-block', width: 400 }}>
+                    <ReactSearchAutocomplete
+                        items={items}
+                        onSearch={handleOnSearch}
+                        onHover={handleOnHover}
+                        onSelect={handleOnSelect2}
+                        onFocus={handleOnFocus}
+                        autoFocus
+                        formatResult={formatResult}
+                        placeholder="Add another LA"
+                    />
+                </div>
+                <div style={{ display: 'inline-block', width: 400}}>
+                    <ReactSearchAutocomplete
+                        items={items}
+                        onSearch={handleOnSearch}
+                        onHover={handleOnHover}
+                        onSelect={handleOnSelect3}
+                        onFocus={handleOnFocus}
+                        autoFocus
+                        formatResult={formatResult}
+                        placeholder="Add another LA"
+                    />
+                </div>
+                <div style={{ display: 'inline-block', width: 400 }}>
+                    <ReactSearchAutocomplete
+                        items={items}
+                        onSearch={handleOnSearch}
+                        onHover={handleOnHover}
+                        onSelect={handleOnSelect4}
+                        onFocus={handleOnFocus}
+                        autoFocus
+                        formatResult={formatResult}
+                        placeholder="Add another LA"
+                    />
+                </div>
+            
+
+
+
             </div>
         </section>
         <br/>
@@ -442,6 +740,8 @@ function Evselector() {
             </LayersControl>
             <MapConsumer>
                 {(map) => {
+                    //layerGroup.addTo(map);
+                    map.addLayer(layerGroup);
                     //console.log('map center:', map.getCenter())
                     //console.log('map center:', map.getCenter())
                     //==================================================================================================map start
@@ -581,7 +881,6 @@ function Evselector() {
                         console.log('Fired!');
                         map.on("overlayadd", function(e){
                             console.log("trigger");
-                            console.log("trigger");
                             if (curLegend != ""){
                                 //if theres already a legend remove the last added one
                                 map.removeControl(curLegend);
@@ -688,23 +987,36 @@ function Evselector() {
 
                             console.log(Object.keys(addedLayers).length);
                             console.log(Object.keys(addedLayers).length);
+                            //layerGroup.bringToFront();
+                            // layerGroup.eachLayer(function (layer) {
+                            //     layer.setZIndexOffset(2000);
+                            //   });
+                            //map.removeLayer(layerGroup);
+                            // if(map.hasLayer(layerGroup)){
+                            //     console.log("has layer and tried to remove");
+                            //     layerGroup.clearLayers();
+                            //     map.removeLayer(layerGroup);
+                                
+                            // }
+                            //LASelectLayer.addTo(layerGroup);
+                            //processSearch();
+                            //console.log("layers:");
+                            //console.log(map.getLayers());
+                            // map.clearLayers();
+                            //processSearch(map);
+                            //map.getLay
+                            
                         })
                     
                         map.on("overlayremove", function(e){
+                            //layerGroup.clearLayers();
                             console.log(Object.keys(addedLayers).length);
-                            console.log(Object.keys(addedLayers).length);
-                            //console.log(e.name);
-                            //console.log(e.name);
-                            //console.log(curLegend);
-                            //console.log(curLegend);
                             if (curLegend != ""){
-                                console.log(curLegend);
                                 console.log(curLegend);
                                 //if theres already a legend remove the last added one
                                 map.removeControl(curLegend);
                                 curLegend = "";
                             }
-                            console.log(addedLayers);
                             console.log(addedLayers);
                             var addedLayersKeys = Object.keys(addedLayers);
                             addedLayersKeys.forEach(key => {
@@ -713,15 +1025,12 @@ function Evselector() {
                                 }
                             })
                             console.log(Object.keys(addedLayers).length);
-                            console.log(Object.keys(addedLayers).length);
-                            console.log(addedLayers);
                             console.log(addedLayers);
                             if (Object.keys(addedLayers).length != 0){
                                 var lastAdd = addedLayersKeys.at(-1);
                                 addedLayers[lastAdd][1].addTo(map);
                                 curLegend = addedLayers[lastAdd][1];
                             }
-                            console.log(Object.keys(addedLayers).length);
                             console.log(Object.keys(addedLayers).length);
                         })
                         setValue0(true);
