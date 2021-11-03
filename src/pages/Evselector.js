@@ -62,6 +62,7 @@ function mergeJson(json1, json2, primaryKey, foreignKey){
 }
 
 function Evselector() {
+    //comment-01 layergroup declared
     var layerGroup = L.featureGroup();
     var LASelectLayer;
     const [legeState, setLegeState] = React.useState([]);
@@ -102,6 +103,8 @@ function Evselector() {
     const handleOnHover = (result) => {
     // the item hovered
     }
+    //comment-02 array for holding search input variables, first 4 are for holding selected LA for that search box, last two are for 
+    //storing if one or multiple LA's are being searched 
     var searchArr = ["null", "null", "null", "null", "", ""];
     const [searchValue1, setSearchValue1] = useState("null");
     // const [searchValue2, setSearchValue2] = useState("null");
@@ -160,9 +163,7 @@ function Evselector() {
         //setSearchArrr(searchArr);
         processSearch(map);
     }
-    function clearLays(){
-        layerGroup.clearLayers();
-    }
+    
     
     function mergeJson(json1, json2, primaryKey, foreignKey){
         const merged = [];
@@ -182,9 +183,10 @@ function Evselector() {
         )
         return merged;
     }
-
+    //comment-03 function thats called when search box array variables have been updated (handelOnSearch1-4)
     function processSearch(map){
         var move = true;
+        //comment-04 event listener that creates MSOA layer (this currently is here because it needs to access the searchArray variables)
         map.on("overlayadd", function(e){
             if (e.name == "biz"){
                 console.log("event trigger");
@@ -276,6 +278,7 @@ function Evselector() {
                 
                 
             }
+            //comment-05 second part of the event listener here that clears and recreates the LA highlight layer
             move = false;
             layerGroup.clearLayers();
             console.log("searchArr len" +searchArr.length );
@@ -398,6 +401,7 @@ function Evselector() {
             //processSearch(map);
 
         })
+        //comment-06 LA highlight layer creation for when search array variables are changed
         layerGroup.clearLayers();
         console.log("searchArr len" +searchArr.length );
         console.log("search V 1" +searchArr[0]);
@@ -985,8 +989,8 @@ function Evselector() {
                     var addedLayers = [];
                     var curLegend = "";
                     var layName = "TXR"
+                    //comment-07 Legends are declared above, event listeners using the above legends are added for layers being added and removed
                     if (!value0){
-                        console.log('Fired!');
                         console.log('Fired!');
                         map.on("overlayadd", function(e){
                             console.log("trigger");
