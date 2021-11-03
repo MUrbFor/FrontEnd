@@ -78,7 +78,7 @@ function WalkCycle(props) {
             opacity: 1,
             color: 'black',
             dashArray: '2',
-            fillOpacity: 0.5
+            fillOpacity: 0.65
         });
     });
 

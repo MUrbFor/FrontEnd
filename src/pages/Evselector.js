@@ -38,8 +38,9 @@ import DundeeStations from "../components/mapLayers/dundeeStations.js";
 import HouseholdActivityLayer from '../components/mapLayers/HouseholdActivity'; 
 import CurBEV, { CurULEV,Population, PrivULEV, CommercialULEV,CurULEVPercent,ResidentialProperties,PercentPropertiesTenements,TotalULEVs2045,TotalBEVs2045} from '../components/mapLayers/cityPopExports.js';
 //import CurBEV from '../components/mapLayers/cityPopExports.js';
-
+import BizMSOA from '../components/mapLayers/bizMSOA';
 import {features} from "../data/GBLayer.json";
+import bizData from "../data/businesses count size and nature.json";
 
 function mergeJson(json1, json2, primaryKey, foreignKey){
     const merged = [];
@@ -102,7 +103,7 @@ function Evselector() {
     // the item hovered
     }
     var searchArr = ["null", "null", "null", "null", "", ""];
-    // const [searchValue1, setSearchValue1] = useState("null");
+    const [searchValue1, setSearchValue1] = useState("null");
     // const [searchValue2, setSearchValue2] = useState("null");
     // const [searchValue3, setSearchValue3] = useState("null");
     // const [searchValue4, setSearchValue4] = useState("null");
@@ -163,10 +164,118 @@ function Evselector() {
         layerGroup.clearLayers();
     }
     
+    function mergeJson(json1, json2, primaryKey, foreignKey){
+        const merged = [];
+        json1.forEach(obj1 =>
+            {
+                var obj1MergedBool = false;
+                json2.some(obj2 => {
+                    if (obj1.properties[primaryKey] == obj2[foreignKey]){
+                        merged.push(Object.assign(obj1, obj2));
+                        obj1MergedBool = true;
+                    }
+                })
+                if (obj1MergedBool == false){
+                    merged.push(obj1);
+                }
+            }
+        )
+        return merged;
+    }
 
     function processSearch(map){
         var move = true;
-        map.once("overlayadd", function(e){
+        map.on("overlayadd", function(e){
+            if (e.name == "biz"){
+                console.log("event trigger");
+                var searchArrr = [];
+                searchArr.forEach(toSearch =>{
+                    if (toSearch != "null" && toSearch != "" && toSearch != "first" && toSearch != "multiple"){
+                        searchArrr.push(toSearch);
+                    }
+                })
+                var newLayGroup = L.layerGroup();
+                map.addLayer(newLayGroup);
+                //newLayGroup.addTo(map);
+                var funkyNumbers = [];
+                searchArrr.forEach(searchTerm => {
+                    features.forEach(feature => {
+                        if (feature.properties.LAD13NM == searchTerm){
+                            funkyNumbers.push(feature.properties.LAD13CD);
+                        }
+                    })
+                })
+                console.log("funky numbers");
+                console.log(funkyNumbers);
+                //var FN = 'E06000013';
+                funkyNumbers.forEach(FN => {
+                    switch(FN){
+                        case 'E06000013':
+                            console.log('E06000013');
+                            var x = require("../data/msoa_by_lad/E06000013.json");
+                            x = x.features;
+                        case 'E06000014':
+                            console.log('E06000014');
+                            var x = require("../data/msoa_by_lad/E06000014.json");
+                            x = x.features;
+                        case 'E08000035':
+                            console.log('E08000035');
+                            var x = require("../data/msoa_by_lad/E08000035.json");
+                            x = x.features;
+                        case 'E08000019':
+                            console.log('E08000019');
+                            var x = require("../data/msoa_by_lad/E08000019.json");
+                            x = x.features;
+                        case 'E06000010':
+                            console.log('E06000010');
+                            var x = require("../data/msoa_by_lad/E06000010.json");
+                            x = x.features;
+                        case 'E08000021':
+                            console.log('E08000021');
+                            var x = require("../data/msoa_by_lad/E08000021.json");
+                            x = x.features;
+                            
+                            
+                            
+                            
+                    }
+                    console.log(x);
+
+
+                    function getColour(d) {
+                        return d > 200 ? '#800026' :
+                            d > 150  ? '#BD0026' :
+                            d > 100  ? '#E31A1C' :
+                            d > 15 ? '#FC4E2A' :
+                            d > 8   ? '#FD8D3C' :
+                            d > 4   ? '#FEB24C' :
+                            d > 1   ? '#FED976' :
+                                        '#FFEDA0';
+                    }
+                    const style = (feature => {
+                        return ({
+                            fillColor: getColour(feature.Micro),
+                            weight: 1,
+                            opacity: 1,
+                            color: 'black',
+                            dashArray: '2',
+                            fillOpacity: 0.65
+                        });
+                    });
+
+                    var jsonsMerged = mergeJson(x, bizData, "MSOA11NM", "MSOA-name"); 
+                    console.log(jsonsMerged);
+
+                    const feature = jsonsMerged.map(feature=>{
+                        return(feature);
+                    });
+
+                    var ggeoJson = L.geoJson(feature, {style: style});
+                    ggeoJson.addTo(newLayGroup);
+                })
+                
+                
+            }
             move = false;
             layerGroup.clearLayers();
             console.log("searchArr len" +searchArr.length );
@@ -177,9 +286,9 @@ function Evselector() {
             if (searchArr[5] == "multiple"){
                 console.log("MULTIPLE LA's 2 Search")
                 //fly to whole uk with low zoom lvl
-                if (move == true){
-                    map.flyTo([54.059388, -3.793332], 6);
-                }
+                // if (move == true){
+                //     map.flyTo([54.059388, -3.793332], 6);
+                // }
                 
                 function getColour(d) {
                     var toRe = '#606060';
@@ -516,7 +625,7 @@ function Evselector() {
         </section>
         <section>
             <h2 className="left">Where?</h2>
-            <div style={{ width: 400 }}>
+            <div style={{ width: 1600 }}>
                 <div style={{ display: 'inline-block', width: 400 }}>
                     <ReactSearchAutocomplete
                         items={items}
@@ -730,7 +839,7 @@ function Evselector() {
                     <ResidentialProperties/>
                     <PercentPropertiesTenements/>
                     
-
+                    <BizMSOA/>
 
                     {/* <DundeeStations/> */}
                     {/* <TrafficCount/>  */}
@@ -761,7 +870,7 @@ function Evselector() {
                         div.innerHTML += '<i style="background: #FFEDA0"></i><span>0 - 10</span><br>';  
                         div.innerHTML += '<i style="background: #FED976"></i><span>10 - 20</span><br>';
                         div.innerHTML += '<i style="background: #FEB24C"></i><span>20 - 30</span><br>';  
-                        div.innerHTML += '<i style="background: #FD8D3C"></i><span>30 - 40/span><br>';                           
+                        div.innerHTML += '<i style="background: #FD8D3C"></i><span>30 - 40</span><br>';                           
                         div.innerHTML += '<i style="background: #FC4E2A"></i><span>40 - 45</span><br>';  
                         div.innerHTML += '<i style="background: #E31A1C"></i><span>45 - 50</span><br>';  
                         div.innerHTML += '<i style="background: #BD0026"></i><span>50 - 60</span><br>'; 
