@@ -4,7 +4,7 @@ import { useMap, Marker, LayersControl, FeatureGroup } from 'react-leaflet';
 import {  iconEV  } from '../markers/Marker.js';
 import L from 'leaflet';
 
-function TXRLayer(props) {
+function TXRLayer() {
     const [TXRdata,TXRsetData] = useState([]);
 
     useEffect(()=> {

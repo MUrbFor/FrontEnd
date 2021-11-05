@@ -43,6 +43,20 @@ function BlueBadgeLayer(props) {
         //getData();
 
     }, []);
+    // var map = useMap();
+
+    // // layName = props.layName
+    // var layName = "Blue Badge Data";
+    // map.on("overlayadd", function (e){
+    //     if (e == layName){
+    //         //add props.legend.addTo(map;
+    //     }
+    // })
+    // map.on("overlayremove", function (e){
+    //     if (e == layName){
+    //         //remove map.removeControl(legend);
+    //     }
+    // })
 
     const loadData = async () =>{
         await fetch("https://cleanstreetserver.herokuapp.com/v1/blueBadge")
@@ -51,7 +65,7 @@ function BlueBadgeLayer(props) {
     }
     var BadgeData = BBdata;
 
-    var layName = "Blue Badge Data";
+   
 
     var jsonsMerged = mergeJson(features, BadgeData, "LAD13CD", "ONSCode");   
 

@@ -188,60 +188,30 @@ function Evselector() {
         var move = true;
         //comment-04 event listener that creates MSOA layer (this currently is here because it needs to access the searchArray variables)
         map.on("overlayadd", function(e){
-            if (e.name == "biz"){
-                console.log("event trigger");
-                var searchArrr = [];
-                searchArr.forEach(toSearch =>{
-                    if (toSearch != "null" && toSearch != "" && toSearch != "first" && toSearch != "multiple"){
-                        searchArrr.push(toSearch);
+            console.log("event trigger");
+            var searchArrr = [];
+            searchArr.forEach(toSearch =>{
+                if (toSearch != "null" && toSearch != "" && toSearch != "first" && toSearch != "multiple"){
+                    searchArrr.push(toSearch);
+                }
+            })
+            var newLayGroup = L.layerGroup();
+            map.addLayer(newLayGroup);
+            //newLayGroup.addTo(map);
+            var funkyNumbers = [];
+            searchArrr.forEach(searchTerm => {
+                features.forEach(feature => {
+                    if (feature.properties.LAD13NM == searchTerm){
+                        funkyNumbers.push(feature.properties.LAD13CD);
                     }
                 })
-                var newLayGroup = L.layerGroup();
-                map.addLayer(newLayGroup);
-                //newLayGroup.addTo(map);
-                var funkyNumbers = [];
-                searchArrr.forEach(searchTerm => {
-                    features.forEach(feature => {
-                        if (feature.properties.LAD13NM == searchTerm){
-                            funkyNumbers.push(feature.properties.LAD13CD);
-                        }
-                    })
-                })
-                console.log("funky numbers");
-                console.log(funkyNumbers);
+            })
+            console.log("funky numbers");
+            console.log(funkyNumbers);
+            if (e.name == "biz"){
+                
                 //var FN = 'E06000013';
                 funkyNumbers.forEach(FN => {
-                    switch(FN){
-                        case 'E06000013':
-                            console.log('E06000013');
-                            var x = require("../data/msoa_by_lad/E06000013.json");
-                            x = x.features;
-                        case 'E06000014':
-                            console.log('E06000014');
-                            var x = require("../data/msoa_by_lad/E06000014.json");
-                            x = x.features;
-                        case 'E08000035':
-                            console.log('E08000035');
-                            var x = require("../data/msoa_by_lad/E08000035.json");
-                            x = x.features;
-                        case 'E08000019':
-                            console.log('E08000019');
-                            var x = require("../data/msoa_by_lad/E08000019.json");
-                            x = x.features;
-                        case 'E06000010':
-                            console.log('E06000010');
-                            var x = require("../data/msoa_by_lad/E06000010.json");
-                            x = x.features;
-                        case 'E08000021':
-                            console.log('E08000021');
-                            var x = require("../data/msoa_by_lad/E08000021.json");
-                            x = x.features;
-                            
-                            
-                            
-                            
-                    }
-                    console.log(x);
 
 
                     function getColour(d) {
@@ -813,7 +783,7 @@ function Evselector() {
                 HouseholdActivityLayer
                 <LayerGroup name="nodes">
                     <METLayer />
-                    <TXRLayer legeState={legeState} handleLedgeChange = {handleLedgeChange} dogs="props Passed"/>
+                    <TXRLayer />
                     <RSELayer />
                     <AIRLayer />
                     <FTDLayer />

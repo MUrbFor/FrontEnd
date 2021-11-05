@@ -17,6 +17,6 @@ function Dashboard(){
           <h1>Hi</h1>
       </div>
     );
-  }
+}
   
-  export default Dashboard;
+export default Dashboard;
